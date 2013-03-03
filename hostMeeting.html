@@ -18,26 +18,17 @@
 		      session.addEventListener("streamCreated", streamCreatedHandler);
 		      session.connect(apiKey, token);
 		      
-		      /*         
-		      function sessionConnectedHandler(event) {
-		    	  var streams = event.streams;
-		    	  for( var i...')
-		    		  
-		    		  session.subscribe( streams[i], ) 
-		        session.publish(publisher);
-		      }*/
-		      
 		        function sessionConnectedHandler (event) {
-		    	     //subscribeToStreams(event.streams);
-		    	     //session.publish();
+		        	// initializing publisher above
+		    	    //session.publish();
 		    	}
 		
 		    	function subscribeToStreams(streams) {
 		    	    for (i = 0; i < streams.length; i++) {
 		    	        var stream = streams[i];
 		    	        if (stream.connection.connectionId != session.connection.connectionId) {
-		    	        	var streamId = "steam" + i;
-		    	        	$("body").append("<div id=\"" + steamId + "\"></div>");
+		    	        	//var streamId = "steam" + i;
+		    	        	//$("body").append("<div id=\"" + steamId + "\"></div>");
 		    	            session.subscribe(stream);
 		    	        }
 		    	    }

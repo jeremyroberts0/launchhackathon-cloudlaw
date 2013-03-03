@@ -12,6 +12,7 @@ $.notification().listen('initialize', 'loginModal', '*', function(notification){
 		$.notification().notify('getValue', 'field', id+'-username', {callback:function(value){
 			username = value;
 		}});
+		
 		$.notification().notify('getValue', 'field', id+'-password', {callback:function(value){
 			password = MD5(value);
 		}});
@@ -43,6 +44,7 @@ $.notification().listen('initialize', 'loginModal', '*', function(notification){
 			$.notification().notify('enable', 'field', id+'-password', { });
 			$.notification().notify('enable', 'button', id+'-loginButton', { });
 		}
+		
 		function disableFields() {
 			$.notification().notify('disable', 'field', id+'-username', { });
 			$.notification().notify('disable', 'field', id+'-password', { });
