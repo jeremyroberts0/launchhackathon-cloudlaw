@@ -10,6 +10,7 @@
     		imagePrefix: 'cl',
     		defaultCredentials: "cloudlawyer.co-public",
     		defaultCustomer: "cloudlawyer.co",
+    		customerGoogleAnalyticsAccount:'UA-38983123-1',
     		defaultUsername: "public",
     		defaultToken: "public",
     		defaultApplication: "wut",
