@@ -1,0 +1,18 @@
+<div id="{{_id}}">
+    <div class="checkout section step1">
+        <div class="header"><span>1</span><a class="pull-right" style="display:none">Edit</a></div>
+        <div class="horizontalLayout">
+            <widget id="{{_id}}-service" type="field">{"type":"dropdown", "label":"Service", "labelType":"horizontal", "required":"true"}</widget>
+            <widget id="{{_id}}-budget" type="field">{"type":"currency", "label":"Budget", "labelType":"horizontal", "required":"true"}</widget>
+        </div>
+    </div>
+    
+    <div class="checkout section step2">
+        <div class="header"><span>2</span><a class="pull-right" style="display:none">Edit</a></div>
+    </div>
+    <div class="checkout section step3">
+        <div class="header"><span>3</span><a class="pull-right" style="display:none">Edit</a></div>
+        <widget id="{{_id}}-billingAddress" type="form">{"schema":"address", "showButton":false, "title":"Billing Address", "order":["firstName", "lastName", "address1", "address2", "city", "state", "zipcode"], "labels":{"firstName":"First Name", "lastName":"Last Name", "address1":"Address Line 1", "address2":"Address Line 2", "city":"City", "state":"State", "zipcode":"Zip Code"}}</widget>
+        <widget id="{{_id}}-paymentInformation" type="form">{"schema":"creditCard", "showButton":false, "title":"Payment Information", "order":["firstNameOnCard", "lastNameOnCard", "number", "type", "ccv"], "labels":{"firstNameOnCard":"First Name On Card", "lastNameOnCard":"Last Name On Card", "number":"Credit Card Number", "type":"Card Type", "ccv":"CCV"}}</widget>
+    </div>
+</div>

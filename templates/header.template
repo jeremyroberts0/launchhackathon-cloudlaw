@@ -1,0 +1,12 @@
+<div id="{{_id}}">
+    <div id="{{_id}}-inner" class="row-fluid">
+        <div class="span6">
+            <widget id="{{_id}}-logo" type="image">{"id":"logo", "type":"logo"}</widget>
+        </div>
+        
+        <div class="span6">
+            <widget id="{{_id}}-login" type="login"></widget>
+        </div>
+    </div>
+    <widget id="{{_id}}-menu" type="menu">{"menu":[{"id":"home", "name":"Home", "link":"index.html"}]}</widget>
+</div>
