@@ -1,10 +1,20 @@
 <html>
 	<head>
 		<script src="http://api.webutilitykit.com/webutilitykit-v1.js"></script>
+		<script src="models/meeting.model.js"></script>
+		<template id="include" type="include"></template>
 	</head>
 	<body>
 		<template id="header" type="header"></template>
-		<div id="myPublisherDiv"></div>
+		
+		<h1>Upcoming Meetings</h1><br />
+		<h3>View your upcoming meetings</h3><br />
+		<template id="meetings" type="meetings" model="meetings"></template>
+		
+		<h1>My Packages</h1><br />
+		<h3>Manage and view your current packages</h3><br />
+		<template id="packages" class="packages"></template>
+		
 		<template id="footer" type="footer"></template>
 	</body>
 </html>
