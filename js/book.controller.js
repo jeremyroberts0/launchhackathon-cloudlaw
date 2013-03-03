@@ -11,19 +11,76 @@ $.notification().listen('updateCalendar', 'controller', 'book', function(notific
 		$.notification().notify('get', 'model', 'meetings', {callback:function(result) {
 			meetings = result;
 			notification.setData('meetings', meetings);
-			meetingsReady.resolve();
-		}, failure:function(){
-			meetingsReady.resolve();
+			updateCal();
 		}});
-		
-		meetingsReady.done(function() {
-			var events = [ ];
-			$.each(meetings.meetings, function(index, meeting) {
-				events.push({epoch:meeting.time, host:meeting.host});
-			});
-			$.notification().notify('update', 'calendar', '*', {unavailableEvents:events, weekChange:0});
-		});
+	} else {
+		updateCal();
 	}
+	function updateCal() {
+		var events = [ ];
+		$.each(meetings, function(index, meeting) {
+			events.push({epoch:meeting.time, host:meeting.host});
+		});
+		$.notification().notify('update', 'calendar', '*', {unavailableEvents:events, weekChange:0});
+	}
+	
+});
+
+$.notification().listen('placeOrder', 'controller', 'book', function(notification) {
+	var payload = notification.getPayload();
+	var data = payload.data;
+	
+	
+//	address1: "4 add1"
+//	address2: "add2"
+//	appointmentCalendar-selected-date: "1362416400000"
+//	bookpage-service: "Startup Package"
+//	ccv: "05/19"
+//	city: "city"
+//	firstName: "jeremy"
+//	firstNameOnCard: "card1"
+//	lastName: "roberts"
+//	lastNameOnCard: "card2"
+//	number: "4111-1111-1111-1111"
+//	state: "CA"
+//	type: "Visa"
+//	zipcode: "92938"
+	
+	//Create appointment
+	//Fake the payment
+	
+	getPrimaryUser(function(credentials) {
+		if (credentials !== undefined && credentials.userId !== undefined) {
+			
+			if (data['appointmentCalendar-selected-date'] === undefined) {
+				$.notification().notify('showSelectATimeAlert', 'calendar', '*', { });
+			} else {
+				var meeting = {
+						customer:credentials.userId,
+						service:data['bookpage-service'],
+						time:data['appointmentCalendar-selected-date'],
+						host:'matlock@matlock.com'
+					};
+					
+					$.notification().notify('create', 'model', 'meeting', {meeting:meeting, callback:function(meetingId) {
+						$.utilities.redirect('account.html?newMeeting='+meetingId);
+					}});
+			}
+			
+			
+		} else {
+			$.notification().notify('userNotLoggedIn', 'controller', 'book', { });
+		}
+	});
+	
+	
+	
+});
+
+$.notification().listen('userNotLoggedIn', 'controller', 'book', function(notification) {
+	var location = window.location.href;
+	$.utilities.redirect('login.html?ref=' + encodeURIComponent(document.location.href) + '#needAccount');
+	
 });
 
 $.notification().listen('topicChosen', 'controller', 'book', function(notification){
@@ -35,3 +92,4 @@ $.notification().listen('dateChosen', 'controller', 'book', function(notificatio
 	//Collapse the calendar section
 	//Show the payments section
 });
+

@@ -1,5 +1,5 @@
 
-$.notification().listen('initialize', 'loginModal', '*', function(notification) {
+$.notification().listen('initialize', 'login', '*', function(notification) {
 	var id = notification.getId();
 	
 	$.notification().listen('click', 'button', 'loginpage-loginButton', function(loginButtonNotification) {

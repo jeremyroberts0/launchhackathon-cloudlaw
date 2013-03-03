@@ -1,4 +1,3 @@
-<template id="{{_id}}-loginModal" type="loginModal"></template>
 <div id="{{_id}}" class="row-fluid">
     
     <div class="inner">
@@ -6,10 +5,9 @@
             <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer", "link":"index.html"}</widget>    
         </div>
         <div class="span8">
-            <a href="#">Packages</a>
-            <a href="#">About</a>
-            <a href="#{{_id}}-loginModal" data-toggle="modal" class="loginLink">Login</a>
+            <a href="login.html" data-toggle="modal" class="loginLink">Login</a>
             <a href="account.html" style="display:none" class="usernameLink"></a>
+            <a href="account.html" style="display:none" class="logoutLink">Logout</a>
         </div>
     </div>
 </div>
