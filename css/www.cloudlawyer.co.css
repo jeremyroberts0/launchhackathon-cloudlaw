@@ -107,6 +107,26 @@ body {
     margin-bottom: 20px;
     margin-top: -15px;
 }
+.calendar.week h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.calendar.week h3 .monthRangeStart, .calendar.week h3 .monthRangeEnd {
+    margin-right: 5px;
+}
+.calendar.week h3 a.previousWeek, .calendar.week h3 a.nextWeek {
+    border: #08c 1px solid;
+    font-weight: bold;
+    width: 28px;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+    
+}
+.calendar.week h3 a.previousWeek:hover, .calendar.week h3 a.nextWeek:hover {
+    text-decoration:none;
+    color: #08c;
+    background-color: #CECEFF;
+}
 .calendar.week table {
     table-layout:fixed;
 }
@@ -130,10 +150,34 @@ body {
     border-left: 0px transparent none;
     border-right: 0px transparent none;
 }
+.calendar.week thead tr td span.date {
+    margin-left: 5px;
+}
 .calendar.week tr td {
     text-align: center;
+}
+.calendar.week tbody td.day {
+    cursor:pointer;
 }
 .calendar.week tr td:first-child {
     text-align:right;
     color:#595959;
 }
+.calendar .event {
+    
+    margin-top: 1px;
+    height: 25px;
+    text-align:center;
+    border-radius: 5px;
+    position:absolute;
+    width: 135px;
+    padding-top: 8px;
+}
+.calendar .event.selected {
+    background-color:rgb(214, 233, 198);
+}
+.calendar .event.unavailable {
+    background-color: #f2dede;
+    cursor:default;
+}
+
