@@ -1,3 +1,6 @@
 {{#meetings}}
-<div>Meeting with</div>
+	<div>Meeting with {{host}} at {{time}}</div>
+{{/meetings}}
+{{^meetings}}
+	<div>You have no meetings scheduled</div>
 {{/meetings}}

@@ -1,1 +1,30 @@
-<div>Some links should go here</div>
+<div class="footer row-fluid">
+	<div class="sub-footer span3">
+		<h4>Something</h4>
+		<a href="#link">Link 1</a><br />
+		<a href="#link">Link 2</a><br />
+		<a href="#link">Link 3</a><br />
+		<a href="#link">Link 4</a><br />
+	</div>
+	<div class="sub-footer span3">
+		<h4>Goes Way</h4>
+		<a href="#link">Link 1</a><br />
+		<a href="#link">Link 2</a><br />
+		<a href="#link">Link 3</a><br />
+		<a href="#link">Link 4</a><br />
+	</div>
+	<div class="sub-footer span3">
+		<h4>Down Here</h4>
+		<a href="#link">Link 1</a><br />
+		<a href="#link">Link 2</a><br />
+		<a href="#link">Link 3</a><br />
+		<a href="#link">Link 4</a><br />
+	</div>
+	<div class="sub-footer span3">
+		<h4>In The Footer</h4>
+		<a href="#link">Link 1</a><br />
+		<a href="#link">Link 2</a><br />
+		<a href="#link">Link 3</a><br />
+		<a href="#link">Link 4</a><br />
+	</div>
+</div>

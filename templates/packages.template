@@ -1,0 +1,13 @@
+{{#packages}}
+	<div>The following documents are related to your package {{name}} ordered on {{time}}:</div>
+	<!-- Progress Bar -->
+	{{#documents}}
+		<div>Document <a href="http://filepicker.io/{{id}}">{{name}}<a/></div>
+	{{/documents}}
+	{{^documents}}
+		<div>You have no documents for this package</div>
+	{{/documents}}
+{{/packages}}
+{{^packages}}
+	<div>You have yet to order any packages from CloudLawyer.co. Order something. Pleaaaaase.</div>
+{{/packages}}
