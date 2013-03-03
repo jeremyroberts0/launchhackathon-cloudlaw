@@ -3,7 +3,7 @@ $.notification().listen('initialize', 'header', '*', function(notification) {
 	
 	$.notification().listen('updateTemplate', 'header', id, function(notification) {
 		var payload = notification.getPayload();
-		getPrimaryUser(function(credentials){
+		getPrimaryUser(function(credentials) {
 			if (credentials === undefined) {
 				$('#'+id+' .usernameLink').hide();
 				$('#'+id+' .loginLink').show();
