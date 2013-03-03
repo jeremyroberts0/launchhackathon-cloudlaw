@@ -1,6 +1,6 @@
 
 
-$.notification().listen('initialize', 'meetings', '*', function(notification) {
+$.notification().listen('initialize', 'packages', '*', function(notification) {
 	
 }
 

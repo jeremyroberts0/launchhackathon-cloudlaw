@@ -1,4 +1,5 @@
-$.notification().listen('initialize', 'loginModal', '*', function(notification){
+
+$.notification().listen('initialize', 'loginModal', '*', function(notification) {
 	var id = notification.getId();
 	
 	$.notification().listen('click', 'button', 'loginpage-loginButton', function(loginButtonNotification) {
@@ -44,15 +45,15 @@ $.notification().listen('initialize', 'loginModal', '*', function(notification){
 		}
 		
 		function enableFields() {
-			$.notification().notify('enable', 'field', id+'-username', { });
-			$.notification().notify('enable', 'field', id+'-password', { });
-			$.notification().notify('enable', 'button', id+'-loginButton', { });
+			$.notification().notify('enable', 'field', 'loginpage'+'-username', { });
+			$.notification().notify('enable', 'field', 'loginpage'+'-password', { });
+			$.notification().notify('enable', 'button', 'loginpage'+'-loginButton', { });
 		}
 		
 		function disableFields() {
-			$.notification().notify('disable', 'field', id+'-username', { });
-			$.notification().notify('disable', 'field', id+'-password', { });
-			$.notification().notify('disable', 'button', id+'-loginButton', { });
+			$.notification().notify('disable', 'field', 'loginpage'+'-username', { });
+			$.notification().notify('disable', 'field', 'loginpage'+'-password', { });
+			$.notification().notify('disable', 'button', 'loginpage'+'-loginButton', { });
 		}
 	
 	
