@@ -168,7 +168,6 @@ $.notification().listen('initialize', 'calendar', '*', function(initializeNotifi
 		
 		
 		var chosenDate = new Date(payload.year, payload.month, payload.day, payload.time.slice(0, payload.time.length - 2));
-		console.error('Chosen date: ' + chosenDate);
 		var chosenEpoch = chosenDate.getTime();
 		
 		$.notification().notify('change-value', 'field', id+'-selected-date', {value:chosenEpoch});
