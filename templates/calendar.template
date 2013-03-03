@@ -1,107 +1,110 @@
 <div id="{{_id}}" class="calendar week">
+    <widget id="{{_id}}-alert" type="alert">{"title":"There was a problem selecting an appointment.  Please contact customer service for assistance", "color":"red"}</widget>
+    <widget id="{{_id}}-selected-date" type="field">{"type":"hidden"}</widget>
+    <h3><a class="previousWeek pull-left"><</a><span class="monthRangeStart"></span><span class="dayRangeStart"></span><span class="yearRangeStart"></span> - <span class="monthRangeEnd"></span><span class="dayRangeEnd"></span><span class="yearRangeEnd"></span><a class="nextWeek pull-right">></a></h3>
     <table class="table table-bordered">
         <thead>
             <tr class="days-header">
                 <td></td>
-                <td>Sunday<span class="date"></span></td>
-                <td>Monday<span class="date"></span></td>
-                <td>Tuesday<span class="date"></span></td>
-                <td>Wednesday<span class="date"></span></td>
-                <td>Thursday<span class="date"></span></td>
-                <td>Friday<span class="date"></span></td>
-                <td>Saturday<span class="date"></span></td>
+                <td data-dayOfWeek="0">Sunday<span class="date"></span></td>
+                <td data-dayOfWeek="1">Monday<span class="date"></span></td>
+                <td data-dayOfWeek="2">Tuesday<span class="date"></span></td>
+                <td data-dayOfWeek="3">Wednesday<span class="date"></span></td>
+                <td data-dayOfWeek="4">Thursday<span class="date"></span></td>
+                <td data-dayOfWeek="5">Friday<span class="date"></span></td>
+                <td data-dayOfWeek="6">Saturday<span class="date"></span></td>
             </tr>
         </thead>
         <tbody>
-            <tr class="time 900">
+            <tr class="time" data-time="900">
                 <td>9:00 AM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1000">
+            <tr class="time" data-time="1000">
                 <td>10:00 AM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1100">
+            <tr class="time" data-time="1100">
                 <td>11:00 AM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1200">
+            <tr class="time" data-time="1200">
                 <td>12:00 PM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1300">
+            <tr class="time" data-time="1300">
                 <td>1:00 PM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1400">
+            <tr class="time" data-time="1400">
                 <td>2:00 PM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1500">
+            <tr class="time" data-time="1500">
                 <td>3:00 PM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
-            <tr class="time 1600">
+            <tr class="time" data-time="1600">
                 <td>4:00 PM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
             <tr class="time 1700">
                 <td>5:00 PM</td>
-                <td class="sunday"></td>
-                <td class="monday"></td>
-                <td class="tuesday"></td>
-                <td class="wednesday"></td>
-                <td class="thursday"></td>
-                <td class="friday"></td>
-                <td class="saturday"></td>
+                <td class="day" td data-dayOfWeek="0"></td>
+                <td class="day" td data-dayOfWeek="1"></td>
+                <td class="day" td data-dayOfWeek="2"></td>
+                <td class="day" td data-dayOfWeek="3"></td>
+                <td class="day" td data-dayOfWeek="4"></td>
+                <td class="day" td data-dayOfWeek="5"></td>
+                <td class="day" td data-dayOfWeek="6"></td>
             </tr>
         </tbody>
     </table>

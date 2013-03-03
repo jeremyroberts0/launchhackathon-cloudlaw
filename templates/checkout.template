@@ -11,7 +11,7 @@
     <div class="checkout section">
         <span class="stepNumber">2</span>
         <h1 class="sectionHeader">Select a Date and Time</h1>
-           <template type="calendar"></template>
+           <template id="appointmentCalendar" type="calendar"></template>
         <widget id="{{_id}}-finish2" type="button">{"title":"Continue", "color":"green", "cssClass":"pull-right"}</widget>
     </div>
     <div class="checkout section paymentForm">
