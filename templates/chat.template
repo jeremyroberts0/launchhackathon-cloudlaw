@@ -1,3 +1,4 @@
-<div id='messagesDiv'></div>
-<input type='text' id='nameInput' placeholder='Name'>
-<input type='text' id='messageInput' placeholder='Message...'>
+<div id='template-chat-message-history'></div>
+<span id='template-chat-name' placeholder='Name'>Russell</span><span>: </span>
+<input id='template-chat-message' type='text' placeholder='Message...'>
+<widget id="chat-submit" type="button">{"title":"chat", "color":"green"}</widget>
