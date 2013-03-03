@@ -1,0 +1,18 @@
+<div id="{{_id}}" class="login modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Login</h3>
+  </div>
+  <div class="modal-body">
+      <div>
+        <widget id="{{_id}}-alert" type="alert">{"text":"This is an alert", "closeable":false, "hidden":false, "color":"red"}</widget>
+        <widget id="{{_id}}-username" type="field">{"label":"Username", "labelType":"horizontal", "required":"true", "type":"email"}</widget>
+        <widget id="{{_id}}-password" type="field" >{"label":"Password", "labelType":"horizontal", "required":"true", "type":"password"}</widget>      
+      </div>
+    
+  </div>
+  <div class="modal-footer">
+    <a href="account.html">Create Account</a>
+    <button class="btn btn-primary pull-right">Login</button>
+  </div>
+</div>

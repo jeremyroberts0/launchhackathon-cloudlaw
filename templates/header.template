@@ -1,5 +1,6 @@
+<template id="{{_id}}-loginModal" type="loginModal"></template>
 <div id="{{_id}}" class="row-fluid">
-    <template id="{{_id}}-loginModal" type="loginModal"></template>
+    
     <div class="inner">
         <div class="span4">
             <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer"}</widget>    
