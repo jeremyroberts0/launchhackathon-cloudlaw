@@ -23,7 +23,7 @@ function subscribeToStreams(streams) {
 		var stream = streams[i];
 		if (stream.connection.connectionId != session.connection.connectionId) {
 			//var streamId = "steam" + i;
-			//$("body").append("<div id=\"" + steamId + "\"></div>");
+			//$("#publisher").append("<div id=\"" + steamId + "\"></div>");
 			session.subscribe(stream);
 		}
 	}
