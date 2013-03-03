@@ -1,30 +1,30 @@
-<div class="footer row-fluid">
-	<div class="sub-footer span3">
-		<h4>Something</h4>
-		<a href="#link">Link 1</a><br />
-		<a href="#link">Link 2</a><br />
-		<a href="#link">Link 3</a><br />
-		<a href="#link">Link 4</a><br />
-	</div>
-	<div class="sub-footer span3">
-		<h4>Goes Way</h4>
-		<a href="#link">Link 1</a><br />
-		<a href="#link">Link 2</a><br />
-		<a href="#link">Link 3</a><br />
-		<a href="#link">Link 4</a><br />
-	</div>
-	<div class="sub-footer span3">
-		<h4>Down Here</h4>
-		<a href="#link">Link 1</a><br />
-		<a href="#link">Link 2</a><br />
-		<a href="#link">Link 3</a><br />
-		<a href="#link">Link 4</a><br />
-	</div>
-	<div class="sub-footer span3">
-		<h4>In The Footer</h4>
-		<a href="#link">Link 1</a><br />
-		<a href="#link">Link 2</a><br />
-		<a href="#link">Link 3</a><br />
-		<a href="#link">Link 4</a><br />
-	</div>
+<div id="{{_id}}" class="footer">
+    <div class="inner row-fluid">
+    	<div class="sub-footer span2">
+    		<h4>Home</h4>
+    		<a href="index.html">Home</a>
+    	</div>
+    	<div class="sub-footer span2">
+    		<h4>Goes Way</h4>
+    		<a href="account.html">My Account</a><br />
+    		<!--<a href="#link">Bills</a><br />-->
+    		<!--<a href="#link">Documents</a><br />-->
+    	</div>
+    	<div class="sub-footer span2">
+    		<h4>Packages</h4>
+    		<a href="index.html#wills">Wills</a><br />
+    		<a href="index.html#trusts">Trusts</a><br />
+    		<a href="index.html#ip">Intellectual Property</a><br />
+    		<a href="index.html#startups">Startups</a><br />
+    		<a href="index.html#probate">Probate</a><br />
+    	</div>
+    	<div class="sub-footer span2">
+    		<h4>Contact</h4>
+    		<a href="index.html">http://www.cloudlawyer.co</a><br />
+    		<a href="mailto:info@retailkit.com">info@retailkit.com</a><br />
+    	</div>
+    </div>
+    <div class="hiddenBottom">
+        <h1>Thanks for choosing Cloud Lawyer!</h1>
+    </div>
 </div>

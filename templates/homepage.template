@@ -1,0 +1,98 @@
+<div id="{{_id}}">
+    <ul class="nav nav-tabs">
+                <li class="active"><a href="#wills" data-toggle="tab">Wills</a></li>
+                <li><a href="#trusts" data-toggle="tab">Trusts</a></li>
+                <li><a href="#ip" data-toggle="tab">Intellectual Property</a></li>
+                <li><a href="#startup" data-toggle="tab">Startup Package</a></li>
+                <li><a href="#probate" data-toggle="tab">Probate</a></li>
+            </ul>
+    <div class="tab-content">
+        <div class="tab-pane active row-fluid" id="wills">
+            <div class="span5">
+                <h1>Legal advice made simple &amp; affordable</h1>
+                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <div>
+                    <widget id="gavel1" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
+                    <widget id="pane1-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right"}</widget>
+                </div>    
+            </div>
+            <div class="span7">
+                <widget id="pane1-image" type="image">{"type":"misc", "id":"matlok", "fileFormat":"png"}</widget>
+            </div>
+        </div>
+        <div class="tab-pane row-fluid" id="trusts">
+            <div class="span5">
+                <h1>Legal advice made simple &amp; affordable</h1>
+                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <div>
+                    <widget id="gavel2" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
+                    <widget id="pane2-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right"}</widget>
+                </div>    
+            </div>
+            <div class="span7">
+                <widget id="pane2-image" type="image">{"type":"misc", "id":"matlok", "fileFormat":"png"}</widget>
+            </div>
+        </div>
+        <div class="tab-pane row-fluid" id="ip">
+            <div class="span5">
+                <h1>Legal advice made simple &amp; affordable</h1>
+                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <div>
+                    <widget id="gavel3" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
+                    <widget id="pane3-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right"}</widget>
+                </div>    
+            </div>
+            <div class="span7">
+                <widget id="pane3-image" type="image">{"type":"misc", "id":"matlok", "fileFormat":"png"}</widget>
+            </div>
+        </div>
+        <div class="tab-pane row-fluid" id="startup">
+            <div class="span5">
+                <h1>Legal advice made simple &amp; affordable</h1>
+                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <div>
+                    <widget id="gavel4" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
+                    <widget id="pane4-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right"}</widget>
+                </div>    
+            </div>
+            <div class="span7">
+                <widget id="pane4-image" type="image">{"type":"misc", "id":"matlok", "fileFormat":"png"}</widget>
+            </div>
+        </div>
+        <div class="tab-pane row-fluid" id="probate">
+            <div class="span5">
+                <h1>Legal advice made simple &amp; affordable</h1>
+                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <div>
+                    <widget id="gavel6" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
+                    <widget id="pane6-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right"}</widget>
+                </div>    
+            </div>
+            <div class="span7">
+                <widget id="pane6-image" type="image">{"type":"misc", "id":"matlok", "fileFormat":"png"}</widget>
+            </div>
+        </div>
+    </div>
+    <div class="bluebar" class="horizontalLayout">
+        <div class="inner">
+            <img src="">
+            <div>
+                <h2>What we offer...</h2>
+                <p>Choose a package below and schedule a video conference with an attorney who specializes in that field.</p>
+            </div>
+        </div>
+    </div>
+    <div class="bluebarspacer"></div>
+    <div class="row-fluid">
+        <div class="span6">
+            <img src="" class="pull-left">
+            <h2>Live 1 on 1 support with great lawyers from the comfort of your home</h2>
+            <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+        </div>
+        <div class="span6">
+            <img src="" class="pull-right">
+            <h2>Easily manage &amp; print your legal documents, all from your account.</h2>
+            <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+        </div>
+    </div>
+</div>
