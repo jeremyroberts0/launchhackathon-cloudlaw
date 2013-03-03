@@ -1,12 +1,14 @@
-<div id="{{_id}}">
-    <div id="{{_id}}-inner" class="row-fluid">
-        <div class="span6">
-            <widget id="{{_id}}-logo" type="image">{"id":"logo", "type":"logo"}</widget>
+<div id="{{_id}}" class="row-fluid">
+    <template id="{{_id}}-loginModal" type="loginModal"></template>
+    <div class="inner">
+        <div class="span4">
+            <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer"}</widget>    
         </div>
-        
-        <div class="span6">
-            <widget id="{{_id}}-login" type="login"></widget>
+        <div class="span8">
+            <a href="#">Packages</a>
+            <a href="#">About</a>
+            <a href="#{{_id}}-loginModal" data-toggle="modal">Login</a>
+            <a href="#" style="display:none" class="usernameLink"></a>
         </div>
     </div>
-    <widget id="{{_id}}-menu" type="menu">{"menu":[{"id":"home", "name":"Home", "link":"index.html"}]}</widget>
 </div>

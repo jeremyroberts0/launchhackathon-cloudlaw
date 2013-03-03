@@ -1,1 +1,6 @@
-<h1>Cloud Lawyer Setup</h1>
+<div id="{{_id}}">
+    <h1>Cloud Lawyer Setup</h1>
+    <div id="{{_id}}-inner" class="horizontalLayout">
+        <widget id="{{_id}}-updateSchemas" type="button" class="updateSchemasButton">{"title":"Update Schemas"}</widget>
+    </div>
+</div>

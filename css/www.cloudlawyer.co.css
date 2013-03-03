@@ -1,35 +1,103 @@
+/* TYPOGRAPHY */
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+h1, h2, h3, h4, h5, h6 {
+    font-family:'Droid Serif';
+}
+p, p.text, a, span, li, label {
+    font-family: 'Droid Sans';
+}
+
 /* $HEADER */
 #header {
-    padding-top: 10px;
+    z-index: 1000;
+    padding-top: 15px;
+    position:fixed;
+    width: 100%;
+    left:0;
+    margin-bottom: 30px;
+    top: 0;
+    height: 50px;
+    
+    text-align: center;
+    /* Gradient stuff */
+    background-image: linear-gradient(top, rgb(0,0,0) 22%, rgb(25,25,25) 61%);
+    background-image: -o-linear-gradient(top, rgb(0,0,0) 22%, rgb(25,25,25) 61%);
+    background-image: -moz-linear-gradient(top, rgb(0,0,0) 22%, rgb(25,25,25) 61%);
+    background-image: -webkit-linear-gradient(top, rgb(0,0,0) 22%, rgb(25,25,25) 61%);
+    background-image: -ms-linear-gradient(top, rgb(0,0,0) 22%, rgb(25,25,25) 61%);
+    
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.22, rgb(0,0,0)),
+        color-stop(0.61, rgb(25,25,25))
+    );
+    /* End gradient stuff */
 }
+#header > div {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    padding-top: 80px;
+    background-color: #EEEEEE;
+}
+
 #header .span6:last-child * {
     text-align:right;
+}
+#header > div > div {
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+#header > div > div:last-child {
+    text-align: right;
+}
+#header > div > div:last-child > a {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #FFFFFF;
+    vertical-align: middle;
 }
 
 /* $CHECKOUT */
 
 .checkout.section {
-    background-color:#D9D9D9;
-    border:#005580 3px solid;
+    border-right:#686868 3px solid;
+    border-bottom:#686868 3px solid;
+    margin-bottom: 30px;
     border-radius: 10px;
-    overflow:hidden;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-.checkout.section .header {
-    background-color:#6DA2D0;
-    padding: 5px 10px 5px 10px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-    margin-bottom: 15px;
-}
-.checkout.section .header span {
     background-color: #FFFFFF;
-    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.checkout.section span.stepNumber {
+    position:relative;
+    display:inline-block;
+    background-color:#0088CC;
+    color: #FFFFFF;
+    font-size: 22px;
+    right: 25px;
+    bottom: 10px;
+    width: 25px;
+    height: 20px;
+    text-align: center;
     border-radius: 15px;
-    width: 30px;
-    height: 23px;
-    display: inline-block;
-    text-align:center;
-    padding-top: 7px;
+    padding-top: 4px;
+    border:#484848 solid 1px;
+}
+.checkout.section h1.sectionHeader {
+    line-height: 20px;
+    font-size: 18px;
+    border-bottom:#707070 1px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: -15px;
 }

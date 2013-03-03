@@ -7,7 +7,7 @@
             companyShortName: "Cloud Lawyer",
     		cdnBase: 'http://81ddd102e3ce0fbdf5e1-7158f6b24e5d11fdd8350c66521fe0d0.r24.cf1.rackcdn.com/',
     		cdbBaseSecure: 'https://81ddd102e3ce0fbdf5e1-7158f6b24e5d11fdd8350c66521fe0d0.ssl.cf1.rackcdn.com/',
-    		imagePrefix: 'demo',
+    		imagePrefix: 'cl',
     		defaultCredentials: "cloudlawyer.co-public",
     		defaultCustomer: "cloudlawyer.co",
     		defaultUsername: "public",
