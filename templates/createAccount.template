@@ -1,0 +1,3 @@
+<div id="{{_id}}">
+    <widget id="{{_id}}-form" type="form">{"schema":"user", "title":"Create Your Account", "showButton":false}</widget>
+</div>
