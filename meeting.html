@@ -1,52 +1,57 @@
 <html>
 	<head>
-		<script src='https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js'></script>
+		<script src="https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js"></script>
+		<script src="http://api.webutilitykit.com/webutilitykit-v1.js"></script>
+		<script type="text/javascript">
+		      // Initialize API key, session, and token...
+		      // Think of a session as a room, and a token as the key to get in to the room
+		      // Sessions and tokens are generated on your server and passed down to the client
+		      var apiKey = "23135122";
+		      var sessionId = "1_MX4yMzEzNTEyMn4xMjcuMC4wLjF-U2F0IE1hciAwMiAxNzoyMzoyMSBQU1QgMjAxM34wLjk0NTA3Njh-";
+		      var token = "T1==cGFydG5lcl9pZD0yMzEzNTEyMiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1jMjY5NTRjYTE1NzViOTY1ZWZmY2ExZTc4Y2QwNmM3YzEwNzI5YjgwOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9JmNyZWF0ZV90aW1lPTEzNjIyNzM4MDEmbm9uY2U9MC41MTMyMTg1MjQ2MTQ1NDM0JmV4cGlyZV90aW1lPTEzNjIzNjAyMDEmY29ubmVjdGlvbl9kYXRhPQ==";
+		
+		      var publisher = TB.initPublisher(apiKey, 'myPublisherDiv', {width:640, height:480});
+		      
+		      // Initialize session, set up event listeners, and connect
+		      var session = TB.initSession(sessionId);
+		      session.addEventListener('sessionConnected', sessionConnectedHandler);
+		      session.addEventListener("streamCreated", streamCreatedHandler);
+		      session.connect(apiKey, token);
+		      
+		      /*         
+		      function sessionConnectedHandler(event) {
+		    	  var streams = event.streams;
+		    	  for( var i...')
+		    		  
+		    		  session.subscribe( streams[i], ) 
+		        session.publish(publisher);
+		      }*/
+		      
+		        function sessionConnectedHandler (event) {
+		    	     //subscribeToStreams(event.streams);
+		    	     //session.publish();
+		    	}
+		
+		    	function subscribeToStreams(streams) {
+		    	    for (i = 0; i < streams.length; i++) {
+		    	        var stream = streams[i];
+		    	        if (stream.connection.connectionId != session.connection.connectionId) {
+		    	        	var streamId = "steam" + i;
+		    	        	$("body").append("<div id=\"" + steamId + "\"></div>");
+		    	            session.subscribe(stream);
+		    	        }
+		    	    }
+		    	}
+		    	
+		    	function streamCreatedHandler(event) {
+		    	    subscribeToStreams(event.streams);
+		    	}
+    </script>
 	</head>
-	<div id="myPublisherDiv"></div>
-        <script type="text/javascript">
-          // Initialize API key, session, and token...
-          // Think of a session as a room, and a token as the key to get in to the room
-          // Sessions and tokens are generated on your server and passed down to the client
-          var apiKey = "23135122";
-          var sessionId = "1_MX4yMzEzNTEyMn4xMjcuMC4wLjF-U2F0IE1hciAwMiAxNzoyMzoyMSBQU1QgMjAxM34wLjk0NTA3Njh-";
-          var token = "T1==cGFydG5lcl9pZD0yMzEzNTEyMiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz1jMjY5NTRjYTE1NzViOTY1ZWZmY2ExZTc4Y2QwNmM3YzEwNzI5YjgwOnJvbGU9cHVibGlzaGVyJnNlc3Npb25faWQ9JmNyZWF0ZV90aW1lPTEzNjIyNzM4MDEmbm9uY2U9MC41MTMyMTg1MjQ2MTQ1NDM0JmV4cGlyZV90aW1lPTEzNjIzNjAyMDEmY29ubmVjdGlvbl9kYXRhPQ==";
-
-          var publisher = TB.initPublisher(apiKey, 'myPublisherDiv', {width:640, height:480});
-          
-          // Initialize session, set up event listeners, and connect
-          var session = TB.initSession(sessionId);
-          session.addEventListener('sessionConnected', sessionConnectedHandler);
-          session.addEventListener("streamCreated", streamCreatedHandler);
-          session.connect(apiKey, token);
-          
-          /*         
-          function sessionConnectedHandler(event) {
-        	  var streams = event.streams;
-        	  for( var i...')
-        		  
-        		  session.subscribe( streams[i], ) 
-            session.publish(publisher);
-          }*/
-          
-            function sessionConnectedHandler (event) {
-        	     //subscribeToStreams(event.streams);
-        	     //session.publish();
-        	}
-
-        	function subscribeToStreams(streams) {
-        	    for (i = 0; i < streams.length; i++) {
-        	        var stream = streams[i];
-        	        if (stream.connection.connectionId != session.connection.connectionId) {
-        	        	var streamId = "steam" + i;
-        	        	$("body").append("<div id=\"" + steamId + "\"></div>");
-        	            session.subscribe(stream);
-        	        }
-        	    }
-        	}
-        	
-        	function streamCreatedHandler(event) {
-        	    subscribeToStreams(event.streams);
-        	}
-        </script>
+	<body>
+		<template id="header" type="header"></template>
+		<div id="myPublisherDiv"></div>
+		<template id="footer" type="footer"></template>
+	</body>
 </html>
     
