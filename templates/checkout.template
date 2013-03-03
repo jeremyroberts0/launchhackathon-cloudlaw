@@ -6,23 +6,25 @@
             <widget id="{{_id}}-service" type="field">{"type":"dropdown", "label":"Service", "labelType":"horizontal", "required":"true"}</widget>
             <widget id="{{_id}}-budget" type="field">{"type":"currency", "label":"Budget", "labelType":"horizontal", "required":"true"}</widget>
         </div>
+        <widget id="{{_id}}-finish1" type="button">{"title":"Continue", "color":"green", "cssClass":"pull-right"}</widget>
     </div>
     <div class="checkout section">
         <span class="stepNumber">2</span>
         <h1 class="sectionHeader">Select a Date and Time</h1>
-        <div class="horizontalLayout">
-           
-        </div>
+           <template type="calendar"></template>
+        <widget id="{{_id}}-finish2" type="button">{"title":"Continue", "color":"green", "cssClass":"pull-right"}</widget>
     </div>
-    <div class="checkout section">
+    <div class="checkout section paymentForm">
         <span class="stepNumber">3</span>
         <h1 class="sectionHeader">Review Your Selection</h1>
         <div class="horizontalLayout">
-            <widget id="{{_id}}-billingAddress" type="form">{"schema":"address", "showButton":false, "title":"Billing Address", "order":["firstName", "lastName", "address1", "address2", "city", "state", "zipcode"], "labels":{"firstName":"First Name", "lastName":"Last Name", "address1":"Address Line 1", "address2":"Address Line 2", "city":"City", "state":"State", "zipcode":"Zip Code"}}</widget>
-            <widget id="{{_id}}-paymentInformation" type="form">{"schema":"creditCard", "showButton":false, "title":"Payment Information", "order":["firstNameOnCard", "lastNameOnCard", "number", "type", "ccv"], "labels":{"firstNameOnCard":"First Name On Card", "lastNameOnCard":"Last Name On Card", "number":"Credit Card Number", "type":"Card Type", "ccv":"CCV"}}</widget>       
+            <div>
+                <widget id="{{_id}}-billingAddress" type="form">{"schema":"address", "labelType":"placeholder", "showButton":false, "title":"Billing Address", "order":["firstName", "lastName", "address1", "address2", "city", "state", "zipcode"], "labels":{"firstName":"First Name", "lastName":"Last Name", "address1":"Address Line 1", "address2":"Address Line 2", "city":"City", "state":"State", "zipcode":"Zip Code"}}</widget>
+            </div>
+            <div>
+                <widget id="{{_id}}-paymentInformation" type="form">{"schema":"creditCard", "labelType":"placeholder", "showButton":false, "title":"Payment Information", "order":["firstNameOnCard", "lastNameOnCard", "number", "type", "ccv"], "labels":{"firstNameOnCard":"First Name On Card", "lastNameOnCard":"Last Name On Card", "number":"Credit Card Number", "type":"Card Type", "ccv":"CCV"}}</widget>       
+            </div>
         </div>
-    </div>
-    
-    
-        
+        <widget id="{{_id}}-finish3" type="button">{"title":"Book Appointment", "color":"green", "cssClass":"pull-right"}</widget>
+    </div>    
 </div>

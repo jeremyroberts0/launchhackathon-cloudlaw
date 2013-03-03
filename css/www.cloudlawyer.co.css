@@ -79,6 +79,7 @@ body {
     background-color: #FFFFFF;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 40px;
 }
 .checkout.section span.stepNumber {
     position:relative;
@@ -105,4 +106,34 @@ body {
     padding-bottom: 5px;
     margin-bottom: 20px;
     margin-top: -15px;
+}
+.calendar.week table {
+    table-layout:fixed;
+}
+.calendar.week thead tr td:first-child {
+    width: 70px;
+}
+.calendar.week thead tr {
+    background-color:#3E3E3E;
+    overflow:hidden;
+}
+.calendar.week tbody tr td {
+    padding-bottom: 20px;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-right: 5px;
+}
+.calendar.week thead tr td {
+    color:#FFFFFF;
+}
+.calendar.week thead tr td {
+    border-left: 0px transparent none;
+    border-right: 0px transparent none;
+}
+.calendar.week tr td {
+    text-align: center;
+}
+.calendar.week tr td:first-child {
+    text-align:right;
+    color:#595959;
 }
