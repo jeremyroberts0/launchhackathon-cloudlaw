@@ -1,5 +1,5 @@
 <div id="{{_id}}" class="calendar week">
-    <widget id="{{_id}}-alert" type="alert">{"title":"There was a problem selecting an appointment.  Please contact customer service for assistance", "color":"red"}</widget>
+    <widget id="{{_id}}-alert" type="alert">{"text":"There was a problem selecting an appointment.  Please contact customer service for assistance", "color":"red"}</widget>
     <widget id="{{_id}}-selected-date" type="field">{"type":"hidden"}</widget>
     <h3><a class="previousWeek pull-left"><</a><span class="monthRangeStart"></span><span class="dayRangeStart"></span><span class="yearRangeStart"></span> - <span class="monthRangeEnd"></span><span class="dayRangeEnd"></span><span class="yearRangeEnd"></span><a class="nextWeek pull-right">></a></h3>
     <table class="table table-bordered">

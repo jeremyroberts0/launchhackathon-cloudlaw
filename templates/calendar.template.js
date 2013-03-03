@@ -159,6 +159,7 @@ $.notification().listen('initialize', 'calendar', '*', function(initializeNotifi
 		var addEventPayload = payload;
 		addEventPayload.type = 'selected';
 		
+		$.notification().notify('hide', 'alert', id+'-alert', { });
 		$.notification().notify('addEvent', 'calendar', id, addEventPayload);
 		$.notification().notify('dateChosen', 'controller', '*', payload);
 		
@@ -184,7 +185,10 @@ $.notification().listen('initialize', 'calendar', '*', function(initializeNotifi
 	});
 	
 	$.notification().listen('genericError', 'calendar', id, function(notification){
-		$.notification().notify('show', 'alert', id+'-alert', { });
+		$.notification().notify('update', 'alert', id+'-alert', {text:'There was a problem selecting an appointment.  Please contact customer service for assistance', hidden:false});
+	});
+	$.notification().listen('showSelectATimeAlert', 'calendar', id, function(notification){
+		$.notification().notify('update', 'alert', id+'-alert', {text:'Please select an appointment time to continue', hidden:false});
 	});
 	
 	$.notification().listen('update', 'calendar', id, function(notification) {
