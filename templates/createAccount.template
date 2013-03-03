@@ -1,3 +1,9 @@
 <div id="{{_id}}">
-    <widget id="{{_id}}-form" type="form">{"schema":"user", "title":"Create Your Account", "showButton":false}</widget>
+    <h1>Create Your Account</h1>
+    <widget id="{{_id}}-alert" type="alert">{"text":"", "color":"red", "closeable":false, "hidden":true}</widget>
+    <widget id="{{_id}}-form" type="form">{"schema":"user", "showButton":false, "order":["firstName", "lastName", "email", "password"], "labels":{"firstName":"First Name", "lastName":"Last Name", "email":"E-mail", "password":"New Password"}}</widget>
+    <div>
+        <widget id="{{_id}}-submit" type="button">{"title":"Create Account", "color":"blue"}</widget>    
+    </div>
+    
 </div>

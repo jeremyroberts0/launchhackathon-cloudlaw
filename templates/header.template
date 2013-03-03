@@ -3,7 +3,7 @@
     
     <div class="inner">
         <div class="span4">
-            <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer"}</widget>    
+            <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer", "link":"index.html"}</widget>    
         </div>
         <div class="span8">
             <a href="#">Packages</a>

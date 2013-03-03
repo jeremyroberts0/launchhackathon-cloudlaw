@@ -8,7 +8,7 @@ $.notification().listen('initialize', 'header', '*', function(notification) {
 				$('#'+id+' .usernameLink').hide();
 				$('#'+id+' .loginLink').show();
 			} else if (credentials.userId !== undefined) {
-				$('#'+id+' .loginLink').html(credentials.userId);
+				$('#'+id+' .usernameLink').html(credentials.userId);
 				$('#'+id+' .loginLink').hide();
 				$('#'+id+' .usernameLink').show();
 			}
