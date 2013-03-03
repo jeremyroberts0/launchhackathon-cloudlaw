@@ -15,16 +15,16 @@ session.connect(apiKey, token);
 
 function sessionConnectedHandler (event) {
 	subscribeToStreams(event.streams);
-	//session.publish();
+	session.publish(publisher);
 }
 
 function subscribeToStreams(streams) {
 	for (i = 0; i < streams.length; i++) {
 		var stream = streams[i];
 		if (stream.connection.connectionId != session.connection.connectionId) {
-		//var streamId = "steam" + i;
-		//$("body").append("<div id=\"" + steamId + "\"></div>");
-		session.subscribe(stream);
+			//var streamId = "steam" + i;
+			//$("body").append("<div id=\"" + steamId + "\"></div>");
+			session.subscribe(stream);
 		}
 	}
 }
@@ -32,3 +32,4 @@ function subscribeToStreams(streams) {
 function streamCreatedHandler(event) {
 	subscribeToStreams(event.streams);
 }
+
