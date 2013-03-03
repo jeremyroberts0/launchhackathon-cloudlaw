@@ -8,8 +8,8 @@
         <div class="span8">
             <a href="#">Packages</a>
             <a href="#">About</a>
-            <a href="#{{_id}}-loginModal" data-toggle="modal">Login</a>
-            <a href="#" style="display:none" class="usernameLink"></a>
+            <a href="#{{_id}}-loginModal" data-toggle="modal" class="loginLink">Login</a>
+            <a href="account.html" style="display:none" class="usernameLink"></a>
         </div>
     </div>
 </div>

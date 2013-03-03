@@ -5,14 +5,14 @@
   </div>
   <div class="modal-body">
       <div>
-        <widget id="{{_id}}-alert" type="alert">{"text":"This is an alert", "closeable":false, "hidden":false, "color":"red"}</widget>
+        <widget id="{{_id}}-alert" type="alert">{"text":"This is an alert", "closeable":false, "hidden":true, "color":"red"}</widget>
         <widget id="{{_id}}-username" type="field">{"label":"Username", "labelType":"horizontal", "required":"true", "type":"email"}</widget>
         <widget id="{{_id}}-password" type="field" >{"label":"Password", "labelType":"horizontal", "required":"true", "type":"password"}</widget>      
       </div>
     
   </div>
   <div class="modal-footer">
-    <a href="account.html">Create Account</a>
-    <button class="btn btn-primary pull-right">Login</button>
+    <a href="createAccount.html">Create Account</a>
+    <widget id="{{_id}}-loginButton" type="button">{"title":"Login", "color":"blue"}</widget>
   </div>
 </div>
