@@ -1,4 +1,5 @@
 <div>
-	<i class="icon-user"></i><div>Russell</div><i class="icon-comment"></i><br />
-	<i class="icon-user"></i><div>Matlock</div><i class="icon-comment"></i><br />
+	{{#attendees}}
+		<div class="attendee"><div class="attendee-availability"></div><div>{{name}}</div><div class="dot"><i class="icon-comment icon-white pull-right"></i></div><br /></div>
+	{{/attendees}}
 </div>

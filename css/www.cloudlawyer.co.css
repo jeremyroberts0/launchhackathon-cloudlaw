@@ -377,3 +377,91 @@ body {
     padding: 5px;
     margin-bottom: 0px;
 }
+
+/* $MEETING */
+.left-side-meeting {
+/* 	padding-right: 10px; 	
+ */
+}
+
+div.row.left-side-meeting-top {
+	padding-bottom: 0px;
+}
+
+/* $VIDEO */
+
+#subscriber {
+	padding: 10px;
+	background-color: white;
+	border: 10px solid #0088CC;
+	border-radius: 5px;
+}
+
+#subscriber p {
+	text-align: center;
+}
+	
+#publisher {
+	padding: 5px;
+	background-color: white;
+	border: 10px solid black;
+	border-radius: 5px;
+}
+
+/* $CHAT */
+
+#template-chat-message-history {
+	padding: 5px;
+	background-color: white;
+	border: 2px solid #0088CC;
+	border-radius: 5px;
+}
+
+#template-chat-message-history em {
+	font-weight: 700;
+}
+
+#template-chat-message {
+	height: 30px;
+	width: 200px;
+	vertical-align: top;
+}
+
+#chat-submit {
+	vertical-align: top;
+}
+
+
+/* $ATTENDEES */
+.template-attendees {
+	background-color: #FFFFFF;
+	padding: 10px 5px 5px 5px;
+	border-top: 5px solid #0088CC;
+	box-shaddow: 0px 0px 1px #FFFFFF;	
+}
+
+.attendee > div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.attendee-availability {
+	background-color: green;
+	border-radius: 10px;
+	width: 10px;
+	height: 10px;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+.attendee > .dot {
+	background-color: orange;
+	border-radius: 20px;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	margin-left: 5px;
+	text-align: center;
+}
+
+
