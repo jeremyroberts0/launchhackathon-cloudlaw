@@ -14,7 +14,7 @@ $.notification().listen('initialize', 'setup', '*', function(notification) {
 		
 		newSchema("meeting", {time:"datetime", order:"id", conferenceToken:"string", host:"string", customer:"string", chatToken:"string", status:"string"});
 
-		newSchema("document", {id:"id", meeting:"string", url:"url"});
+		newSchema("document", {id:"id", meeting:"string", url:"url", name:"string"});
 		
 		newSchema("order", {id:"id", meeting:"id", status:"string"});
 

@@ -36,6 +36,7 @@ $.notification().listen('initialize', 'createAccount', '*', function(notificatio
 	    }, function() {
 	        $.server({userId:$.appConfig.defaultUsername}).update("user", {"username":data.email, "customer":$.appConfig.defaultCustomer,"password":MD5(data.password), "name":data.firstName + ' ' + data.lastName}, function(createResult) {
 	        	$.server().login($.appConfig.defaultCustomer, data.email, MD5(data.password), function(data) {
+	        		$.server().update("email", {to:data.email, subject:"Your New CloudLawyer Account", body:"Your CloudLawyer acount has been created successfully"});
 	        		redirect();
 	        	});
 	        	

@@ -6,7 +6,7 @@ $.notification().listen('get', 'model', 'meetings', function(notification) {
 			//payload.failure();
 			//$.notification.notify("login", )
 			//$('#header-loginModal').modal('show');
-			$.utilities.redirect("login.html");
+			$.utilities.redirect("login.html?ref=" + encodeURIComponent(document.location.href));
 			// TODO user not logged in -- handle this better
 		} else {
 			$.server({"userId":$.appConfig.defaultUsername}).read("table", { id:"meeting"}, function(data) {
