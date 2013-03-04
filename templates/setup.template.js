@@ -12,7 +12,7 @@ $.notification().listen('initialize', 'setup', '*', function(notification) {
 		newSchema("creditCard", {firstNameOnCard:"string", lastNameOnCard:"string", type:"cardType", number:"cardNumber", expiration:"expdate", ccv:"ccv"});
 		newSchema("user", {firstName:"string", lastName:"string", email:"email", password:"newPassword"});
 		
-		newSchema("meeting", {time:"datetime", conferenceToken:"string", host:"string", customer:"string", chatToken:"string"});
+		newSchema("meeting", {time:"datetime", order:"id", conferenceToken:"string", host:"string", customer:"string", chatToken:"string", status:"string"});
 
 		newSchema("document", {id:"id", meeting:"string", url:"url"});
 		
