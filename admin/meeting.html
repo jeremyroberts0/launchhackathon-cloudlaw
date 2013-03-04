@@ -10,8 +10,10 @@
     <widget id="meh" type="form">{"schema":"meeting", "table":"meeting", "row":"2", "title":"Editing Meeting", "showId":true, "order":["id", "name", "description", "image"], "saveButtonText":"Save Meeting", "labelType":"placeholder", "errorPlacement":"right"}</widget>
     <template id="footer" type="../../templates/footer"></template>
     <script>
-    	$.notification.listen("initialize", "meeting", )
-    	$.notification.notify("update", "form", "meh", { row:10 });
+    	$.notification().listen("loaded", "form", "meh", function(notification) {
+    		var meetingId = $.url.parameter("id");
+    		$.notification().notify("update", "form", "meh", { row:meetingId });
+    	});
     </script>
 </body>
 </html>
