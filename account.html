@@ -2,7 +2,9 @@
 	<head>
 		<script src="http://api.webutilitykit.com/webutilitykit-v1.js"></script>
 		<script src="models/meeting.model.js"></script>
+		<script src="models/document.model.js"></script>
 		<template id="include" type="include"></template>
+		<title>Cloud Lawyer</title>
 	</head>
 	<body>
 		<template id="header" type="header"></template>
@@ -14,9 +16,9 @@
 		<br />
 		<br />
 		
-		<h2>My Packages</h2>
+		<h2>My Documents</h2>
 		<h4>Manage and view your current packages</h4>
-		<template id="packages" type="packages" runAt="client"></template>
+		<template id="packages" type="packages" model="ownDocumentsByMeeting" runAt="client"></template>
 		
 		<template id="footer" type="footer"></template>
 	</body>

@@ -1,5 +1,5 @@
 {{#result}}
-    <div class="meeting-card">
+    <div id="meeting-{{id}}" class="meeting-card">
         <div class="inner horizontalLayout">
             <p>{{time}}</p>
             <div class="big-plus"></div>    

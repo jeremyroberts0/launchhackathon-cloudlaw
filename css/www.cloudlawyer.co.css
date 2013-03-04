@@ -377,3 +377,45 @@ body {
     padding: 5px;
     margin-bottom: 0px;
 }
+.template-packages {
+    margin-top: 20px;
+}
+.template-packages .documentsHeaderWrapper {
+    border-top: 1px solid #bfbec0;
+    border-bottom: 1px solid #bfbec0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.template-packages .documentsHeaderWrapper * {
+    vertical-align:middle;
+}
+.template-packages .documentsHeaderWrapper p.package-name {
+    display:inline-block;
+    color:#0088CC;
+}
+.template-packages .documentsHeaderWrapper .documentsLink {
+    text-align: center;
+    color:#BFBFBF;
+}
+.template-packages .documentsList {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4D4645;
+}
+.template-packages .documentsList p {
+    display:inline-block;
+    color: #FFFFFF;
+}
+.template-packages .documentsList a {
+    color: #0088CC;
+}
+.template-packages .documentsLink.link {
+    cursor:pointer;
+    color:#79797a;
+}
+.template-packages .documentsLink.link:hover {
+    text-decoration:underline;
+}
+

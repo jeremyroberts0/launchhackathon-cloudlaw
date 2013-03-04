@@ -1,13 +1,24 @@
-{{#packages}}
-	<div>The following documents are related to your package {{name}} ordered on {{time}}:</div>
-	<!-- Progress Bar -->
-	{{#documents}}
-		<div>Document <a href="http://filepicker.io/{{id}}">{{name}}<a/></div>
-	{{/documents}}
-	{{^documents}}
-		<div>You have no documents for this package</div>
-	{{/documents}}
-{{/packages}}
-{{^packages}}
-	<div>You have yet to order any packages from CloudLawyer.co. Order something. Pleaaaaase.</div>
-{{/packages}}
+<div id="{{_id}}">
+    {{#packages}}
+        <div id="files-{{id}}">
+            <div class="documentsHeaderWrapper horizontalLayout">
+                <p class="package-name">{{service}}</p>
+                <div class="documentsLink link pull-right">
+                    Documents
+                </div>
+            </div>
+            <div class="documentsList" style="display:none">
+                {{#documents}}
+                    <p class="document-name">{{name}}</p>
+                    <a href="{{url}}" target="_blank" class="pull-right" download="{{name}}"><i class="icon-download-alt icon-white"></i> Download this Document</a>
+                {{/documents}}
+                {{^documents}}
+                <div>You have no documents for this meeting</div>
+                {{/documents}}
+            </div>
+        </div>
+    {{/packages}}
+    {{^packages}}
+    	<div>Your lawyer has not added any documents for you</div>
+    {{/packages}}
+</div>
