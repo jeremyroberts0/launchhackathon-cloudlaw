@@ -1,13 +1,13 @@
 {{#result}}
     <div id="meeting-{{id}}" class="meeting-card">
         <div class="inner horizontalLayout">
-            <p>{{time}}</p>
+            <p>{{niceTime}}</p>
             <div class="big-plus"></div>    
         </div>
         <div class="meeting-info horizontalLayout">
             <p class="bold">Video Conference</p>
             <p>with {{host}}</p>
-            &nsbp;<a href="meeting.html?id={{id}}">Start Meeting</a>
+            &nbsp;<a href="meeting.html?id={{time}}">Start Meeting</a>
             <br />
         </div>
     </div>
