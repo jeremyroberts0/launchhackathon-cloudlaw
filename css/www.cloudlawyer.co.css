@@ -438,9 +438,8 @@ body.extraPadding {
     color:#0088CC;
     margin-bottom: 10px
 }
-.meeting-card .meeting-info a.meeting-over {
-    color:#2F2F2F;
-    cursor:default;
+.meeting-card .meeting-info a.meeting-unavailable {
+    color:#D2D2D2;
 }
 .template-packages {
     margin-top: 20px;
@@ -468,6 +467,16 @@ body.extraPadding {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #4D4645;
+}
+.template-packages .documentsList > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom:solid 1px #D7D7D7;
+}
+.template-packages .documentsList > div:last-child {
+    border-bottom: none 0px transparent;
 }
 .template-packages .documentsList p {
     display:inline-block;

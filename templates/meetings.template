@@ -7,7 +7,7 @@
         <div class="meeting-info horizontalLayout">
             <p class="bold">Video Conference</p>
             <p>with {{host}}</p>
-            &nbsp;<a href="meeting.html?id={{time}}">Start Meeting</a>
+            &nbsp;<a href="meeting.html?id={{time}}">Meeting Scheduled</a>
             <br />
         </div>
     </div>

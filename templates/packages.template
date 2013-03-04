@@ -9,8 +9,10 @@
             </div>
             <div class="documentsList" style="display:none">
                 {{#documents}}
+                <div>
                     <p class="document-name">{{name}}</p>
                     <a href="{{url}}" target="_blank" class="pull-right" download="{{name}}"><i class="icon-download-alt icon-white"></i> Download this Document</a>
+                </div>
                 {{/documents}}
                 {{^documents}}
                 <p>You have no documents for this meeting</p>
