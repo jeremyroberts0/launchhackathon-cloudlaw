@@ -14,5 +14,7 @@ $.notification().listen('initialize', 'setup', '*', function(notification) {
 		
 		newSchema("meeting", {time:"datetime", conferenceToken:"string", host:"string", customer:"string", chatToken:"string"});
 
+		newSchema("document", {id:"id", meeting:"string", host:"string", customer:"string", chatToken:"string"});
+
 	});
 });

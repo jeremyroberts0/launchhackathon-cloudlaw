@@ -58,15 +58,17 @@ function sessionConnectedHandler (event) {
 
 function subscribeToStreams(streams) {
 	if (streams.length < 1) {
-		$("#subscriber").append("Your lawyer will be here shortly");
+		$("#subscriber").append("<p>Your legal representative will be here shortly</p>");
+	} else {
+		$("#subscriber").html();
 	}
 
 	for (i = 0; i < streams.length; i++) {
 		var stream = streams[i];
 		if (stream.connection.connectionId != session.connection.connectionId) {
 			var streamId = "steam" + i;
-			$("#subscriber").append("<div id=\"" + steamId + "\"></div>");
-			session.subscribe(stream, steamId, {width:760, height:570});
+			$("#subscriber").append("<div id=\"" + streamId + "\"></div>");
+			session.subscribe(stream, streamId, {width:530, height:420});
 		}
 	}
 }
@@ -74,3 +76,11 @@ function subscribeToStreams(streams) {
 function streamCreatedHandler(event) {
 	subscribeToStreams(event.streams);
 }
+
+
+$.notification.listen("change", "field", "showMyVideoCheckbox", function(data) {
+	alert("hi");
+	$("#publisher").toggle();
+});
+
+
