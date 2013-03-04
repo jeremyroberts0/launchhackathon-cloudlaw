@@ -30,9 +30,19 @@ $.notification().listen('initialize', 'header', '*', function(notification) {
 	});
 	
 	$.notification().listen('authentication', 'logoutCompleted', id, function(notification){
-		$('#'+id+' .usernameLink').hide();
-		$('#'+id+' .logoutLink').hide();
-		$('#'+id+' .loginLink').show();
+		$.notification().notify('updateTemplate', 'header', id, { });
+	});
+	
+	$.notification().listen('showGlobalNotification', 'header', '*', function(notification) {
+		var payload = notification.getPayload();
+		var  shown = $('#'+id+'-wrapper').hasClass('showNotification');
+		
+		if (shown === false) {
+			$('#'+id+'-wrapper').addClass('showNotification');
+			$('#'+id+'-wrapper .globalNotification p').html(payload.text);
+			$('#'+id+'-wrapper .globalNotification p').attr('class', payload.type);
+			$('#'+id+'-wrapper .globalNotification').slideDown();
+		}
 	});
 	
 });

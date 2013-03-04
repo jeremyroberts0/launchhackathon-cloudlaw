@@ -83,14 +83,16 @@ $.notification().listen('get', 'model', 'ownDocumentsByMeeting', function(notifi
 		var docsToReturn = [ ];
 		
 		$.each(sortedDocs, function(meetingId, docsInMeeting) {
-			var nextMeeting = { };
-			nextMeeting.id = meetingId;
-			nextMeeting.documents = docsInMeeting;
-			nextMeeting.time = sortedMeetings[meetingId].time;
-			nextMeeting.service = sortedMeetings[meetingId].service
-			nextMeeting.host = sortedMeetings[meetingId].host;
-			nextMeeting.hostName = sortedMeetings[meetingId].hostName;
-			docsToReturn.push(nextMeeting);
+			if (sortedMeetings[meetingId] !== undefined) {
+				var nextMeeting = { };
+				nextMeeting.id = meetingId;
+				nextMeeting.documents = docsInMeeting;
+				nextMeeting.time = sortedMeetings[meetingId].time;
+				nextMeeting.service = sortedMeetings[meetingId].service
+				nextMeeting.host = sortedMeetings[meetingId].host;
+				nextMeeting.hostName = sortedMeetings[meetingId].hostName;
+				docsToReturn.push(nextMeeting);
+			}
 		});
 		
 		if (payload.callback !== undefined) {

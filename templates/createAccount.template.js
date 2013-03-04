@@ -1,7 +1,24 @@
 $.notification().listen('initialize', 'createAccount', '*', function(notification) {
 	var id = notification.getId();
 	
+	function redirect() {
+		var referrer = $.url.parameter("ref");
+		if (referrer === undefined || referrer === null || referrer === "") {
+			referrer = "account.html";
+		} else {
+			referrer = decodeURIComponent(referrer);
+		}
+		$.utilities.redirect(referrer);
+	}
+	
+	getPrimaryUser(function(credentials) {
+		if (credentials !== undefined) {
+			redirect();
+		}
+	});
+	
 	$.notification().listen('click', 'button', id+'-submit', function() {
+		$.notification().notify('hide', 'alert', id+'-alert', { });
 		disableFields();
 		
 		var rawData = $.utilities.getFormData(id);
@@ -14,14 +31,14 @@ $.notification().listen('initialize', 'createAccount', '*', function(notificatio
 		
 		
 		$.server({userId:$.appConfig.defaultUsername}).read("user", {"username":data.email, "customer":$.appConfig.defaultCustomer}, function(result) {
-	        //User exists
 			$.notification().notify('update', 'alert', id+'-alert', {text:'A user with this e-mail address already exists', hidden:false});
 			enableFields();
 	    }, function() {
 	        $.server({userId:$.appConfig.defaultUsername}).update("user", {"username":data.email, "customer":$.appConfig.defaultCustomer,"password":MD5(data.password), "name":data.firstName + ' ' + data.lastName}, function(createResult) {
-	        	//User created
-	        	$.utilities.redirect('account.html#newAccount');
-	        	enableFields();
+	        	$.server().login($.appConfig.defaultCustomer, data.email, MD5(data.password), function(data) {
+	        		redirect();
+	        	});
+	        	
 	        }, function(){
 	        	$.notification().notify('update', 'alert', id+'-alert', {text:'A server error occured while creating your user, please try again', hidden:false});
 	        });
