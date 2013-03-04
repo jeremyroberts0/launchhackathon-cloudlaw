@@ -62,10 +62,28 @@ $.notification().listen('placeOrder', 'controller', 'book', function(notificatio
 						host:'Ben Matlock',
 						hostEmail:'ben@matlock.com'
 					};
+				var order = {
+						customer:credentials.userId,
+						service:data['bookpage-service'],
+						time:data['appointmentCalendar-selected-date'],
+						address1:data.address1,
+						address2:data.address2,
+						city:data.city,
+						state:data.state,
+						zipcode:data.zipcode,
+				}
 					
+				
 					$.notification().notify('create', 'model', 'meeting', {meeting:meeting, callback:function(meetingId) {
-						$.utilities.redirect('account.html?newMeeting='+meetingId);
+						$.server({userId:$.appConfig.defaultUsername}).override('table', {id:meetingId, row:meetingId, data:order}, function(){
+							$.utilities.redirect('account.html?newMeeting='+meetingId);
+						});
 					}});
+					
+					
+				
+					
+				
 			}
 			
 			

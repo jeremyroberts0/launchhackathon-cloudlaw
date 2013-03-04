@@ -438,6 +438,10 @@ body.extraPadding {
     color:#0088CC;
     margin-bottom: 10px
 }
+.meeting-card .meeting-info a.meeting-over {
+    color:#2F2F2F;
+    cursor:default;
+}
 .template-packages {
     margin-top: 20px;
 }
