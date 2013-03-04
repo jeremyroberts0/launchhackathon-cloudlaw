@@ -139,7 +139,7 @@ $.notification().listen('initialize', 'calendar', '*', function(initializeNotifi
 		var id = notification.getId();
 		var payload = notification.getPayload();
 		
-		var dayClicked = $('#'+id+' tr[data-time="' + payload.time + '"] td[data-day="' + payload.dayOfWeek + '"]');
+		var dayClicked = $('#'+id+' tr[data-time="' + payload.time + '"] td[data-day="' + payload.day + '"]');
 		
 		dayClicked.popover({title:'Time slot unavailable', 
 								content:'This time slot is currently unavailable.  Please choose another.', 
