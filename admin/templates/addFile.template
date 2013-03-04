@@ -1,0 +1,6 @@
+<div id={{_id}}>
+    <h1>Add file for meeting </h1>
+    <widget id="{{_id}}-name" type="field">{"type":"string", "label":"Name"}</widget>
+    <widget id={{_id}}-button type="button">{"title":"Add file", "color":"green", "icon":"icon-plus icon-white"}</widget>
+    <p></p>
+</div>
