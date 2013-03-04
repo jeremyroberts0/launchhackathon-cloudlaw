@@ -77,3 +77,31 @@ $.notification().listen('create', 'model', 'meeting', function(notification){
 		}
 	});
 });
+
+$.notification().listen('get', 'model', 'meeting', function(notification) {
+	var payload = notification.getPayload();
+	
+	var meetingId = payload.id;
+	
+	$.server({"userId":$.appConfig.defaultUsername}).read("table", { id:"meeting", row:meetingId}, function(data) {
+		if (payload.callback !== undefined) {
+			payload.callback(data.result);
+		}
+	}, function(){
+		if (payload.failure !== undefined) {
+			payload.failure({message:'server error'});
+		}
+	});
+	
+	getPrimaryUser(function(credentials){
+		if (credentials === undefined || credentials.userId === undefined) {
+			//payload.failure();
+			//$.notification.notify("login", )
+			//$('#header-loginModal').modal('show');
+			$.utilities.redirect("login.html");
+			// TODO user not logged in -- handle this better
+		} else {
+			
+		}
+	});
+});
