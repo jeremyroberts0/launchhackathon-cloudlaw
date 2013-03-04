@@ -3,7 +3,7 @@
       	<div class="row">
       		<div id="publisher"></div>
 	      		<div class="row">
-	      			Checkbox
+	      			<widget id="showMyVideoCheckbox" type="field">{"type":"boolean", "label":"Boolean Field", "labelType":"Show my video feed?"}</widget>
 	      		</div>
       		</div>
       </div>

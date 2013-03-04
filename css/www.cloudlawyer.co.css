@@ -438,8 +438,7 @@ body {
 
 /* $MEETING */
 .left-side-meeting {
-/* 	padding-right: 10px; 	
- */
+/* 	padding-right: 10px;  */
 }
 
 div.row.left-side-meeting-top {
@@ -460,10 +459,11 @@ div.row.left-side-meeting-top {
 }
 	
 #publisher {
-	padding: 5px;
+	padding: 0px;
 	background-color: white;
 	border: 10px solid black;
 	border-radius: 5px;
+	margin-left: 50px;
 }
 
 /* $CHAT */
@@ -491,6 +491,7 @@ div.row.left-side-meeting-top {
 
 
 /* $ATTENDEES */
+
 .template-attendees {
 	background-color: #FFFFFF;
 	padding: 10px 5px 5px 5px;
