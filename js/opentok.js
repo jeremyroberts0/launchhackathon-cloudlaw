@@ -54,7 +54,7 @@ function sessionConnectedHandler (event) {
 
 function subscribeToStreams(streams) {
 	if (streams.length < 1) {
-		$("#subscriber").append(">");
+		$("#subscriber").append("Your lawyer will be here shortly");
 	}
 
 	for (i = 0; i < streams.length; i++) {
