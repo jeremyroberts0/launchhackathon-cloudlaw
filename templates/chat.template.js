@@ -1,4 +1,10 @@
-
+$.notification().listen('initialize', 'chat', '*', function(notification){
+	$('#template-chat-message').keyup(function(e) {
+	    if (e.which == 13) {
+	    	$.notification().notify("click", "button", "chat-submit", { });
+	    }
+	});
+});
 //$(document).ready(function() {
 //	
 //	var chatId = $.url.getParameter("chatId");

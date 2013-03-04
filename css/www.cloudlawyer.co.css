@@ -50,18 +50,6 @@ button {
     text-align: center;
     margin-bottom: 10px;
 }
-#header-wrapper.showNotification #header {
-    margin-bottom: 60px;
-}
-.globalNotification {
-    margin-top: 30px;
-    z-index:999;
-    position:fixed;
-    width: 100%;
-    left:0;
-    top: 0;
-    height: 50px;   
-}
 #header, .footer {
      /* Gradient stuff */
     background-image: linear-gradient(top, rgb(0,0,0) 22%, rgb(25,25,25) 61%);
@@ -78,7 +66,7 @@ button {
     );
     /* End gradient stuff */
 }
-#header > div {
+#header .row-fluid {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -105,10 +93,31 @@ body {
     color: #FFFFFF;
     vertical-align: middle;
 }
-
+body.extraPadding {
+    padding-top: 130px;
+}
 .globalNotification {
     background-color: #FFFFFF;
-    height: 70px;
+    height: 50px;
+    position:relative;
+    top: 10px;
+    text-align:center;
+}
+.globalNotification p {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 18px;
+    vertical-align: middle;
+    position:relative;
+    top: 15px;
+}
+.globalNotification p.error {
+    color:#802420;
+}
+.globalNotification p.success {
+    color:#008000;
 }
 
 
@@ -436,11 +445,6 @@ body {
     text-align: center;
 }
 
-/* $MEETING */
-.left-side-meeting {
-/* 	padding-right: 10px;  */
-}
-
 div.row.left-side-meeting-top {
 	padding-bottom: 0px;
 }
@@ -465,7 +469,17 @@ div.row.left-side-meeting-top {
 	border-radius: 5px;
 	margin-left: 50px;
 }
-
+#showMyVideoCheckbox {
+    text-align: right;
+    padding-right: 30px;
+    margin-top: 10px;
+}
+#showMyVideoCheckbox label {
+    margin-top: 6px;
+}
+#showMyVideoCheckbox {
+    display:none;
+}
 /* $CHAT */
 
 #template-chat-message-history {
@@ -473,6 +487,10 @@ div.row.left-side-meeting-top {
 	background-color: white;
 	border: 2px solid #3EA0CA;
 	border-radius: 5px;
+	height:300px;
+	overflow-y:scroll;
+	border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 #template-chat-message-history em {
@@ -480,13 +498,20 @@ div.row.left-side-meeting-top {
 }
 
 #template-chat-message {
-	height: 30px;
-	width: 200px;
+	height: 28px;
+	width: 244px;
 	vertical-align: top;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 #chat-submit {
 	vertical-align: top;
+	position:absolute;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px;
 }
 
 

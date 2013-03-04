@@ -22,6 +22,9 @@ messagesRef.limit(10).on('child_added', function (snapshot) {
 $.notification().listen("click", "button", "chat-submit", function(data) {
 	var name = $('#template-chat-name').html();
     var text = $('#template-chat-message').val();
-    messagesRef.push({name:name, text:text});
+    if (text !== '') {
+    	messagesRef.push({name:name, text:text});
+    }
     $('#template-chat-message').val('');
+    $('#template-chat-message').focus();
 });

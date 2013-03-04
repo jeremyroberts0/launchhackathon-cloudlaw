@@ -33,16 +33,20 @@ $.notification().listen('initialize', 'header', '*', function(notification) {
 		$.notification().notify('updateTemplate', 'header', id, { });
 	});
 	
-	$.notification().listen('showGlobalNotification', 'header', '*', function(notification) {
-		var payload = notification.getPayload();
-		var  shown = $('#'+id+'-wrapper').hasClass('showNotification');
+	$.notification().listen('showGlobalNotification', 'header', id, function(notification) {
 		
-		if (shown === false) {
-			$('#'+id+'-wrapper').addClass('showNotification');
-			$('#'+id+'-wrapper .globalNotification p').html(payload.text);
-			$('#'+id+'-wrapper .globalNotification p').attr('class', payload.type);
-			$('#'+id+'-wrapper .globalNotification').slideDown();
-		}
+		var payload = notification.getPayload();
+		$('#'+id+' .globalNotification p').html(payload.text);
+		$('#'+id+' .globalNotification p').attr('class', payload.type);
+		$('#body').addClass('extraPadding');
+//		$('#body').animate({padding-top:130});
+		$('#'+id+' .globalNotification').slideDown();
+	});
+	
+	$.notification().listen('hideGlobalNotification', 'header', id, function(notificaiton) {
+		$('#body').removeClass('extraPadding');
+//		$('#body').animate({padding-top:80});
+		$('#'+id+' .globalNotification').slideUp();
 	});
 	
 });

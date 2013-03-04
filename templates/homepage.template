@@ -9,8 +9,8 @@
     <div class="tab-content">
         <div class="tab-pane active row-fluid" id="wills">
             <div class="span5">
-                <h1>Legal advice made simple &amp; affordable</h1>
-                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <h1>Wills & Estate Planning</h1>
+                <p>Sharing your wishes with a complete will helps reduce the burden on your family after you're gone. A complete will is the cornerstone of your estate plan, and it puts in writing where you want your property to go and who will carry out those wishes after your death. Even if you don't have a lot to leave behind, drafting a complete will today saves your loved ones extra expenses and hassles down the road.</p>
                 <div>
                     <widget id="gavel1" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
                     <widget id="pane1-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
@@ -22,8 +22,8 @@
         </div>
         <div class="tab-pane row-fluid" id="trusts">
             <div class="span5">
-                <h1>Legal advice made simple &amp; affordable</h1>
-                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <h1>Living Trust</h1>
+                <p>This document is used to create a trust to manage your assets (including Digital Assets*), as well as your pets, during your lifetime. It provides for payments of income to you and distributes the remaining assets of the trust upon your death.</p>
                 <div>
                     <widget id="gavel2" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
                     <widget id="pane2-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
@@ -35,8 +35,8 @@
         </div>
         <div class="tab-pane row-fluid" id="ip">
             <div class="span5">
-                <h1>Legal advice made simple &amp; affordable</h1>
-                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <h1>Intellectual Property</h1>
+                <p>You've done it! You've invented something everyone needs and the world is going to beat a path to your door. With a Provisional Patent Application, you can put your name on your invention, and protect the time and money you invested if your provisional patent status is approved. We'll help you create a Provisional Patent Application to file with the U.S. Patent and Trademark Office.</p>
                 <div>
                     <widget id="gavel3" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
                     <widget id="pane3-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
@@ -48,8 +48,12 @@
         </div>
         <div class="tab-pane row-fluid" id="startup">
             <div class="span5">
-                <h1>Legal advice made simple &amp; affordable</h1>
-                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <h1>Start Up Package</h1>
+                <ul>
+                    <li>Incorporation</li>
+                    <li>Intellectual Property</li>
+                    <li>Setup Contracts &amps; Agreements</li>
+                </ul>
                 <div>
                     <widget id="gavel4" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
                     <widget id="pane4-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
@@ -61,8 +65,8 @@
         </div>
         <div class="tab-pane row-fluid" id="probate">
             <div class="span5">
-                <h1>Legal advice made simple &amp; affordable</h1>
-                <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+                <h1>Probate</h1>
+                <p>When you are responsible for handling the legal affairs of someone who has died, you are likely to have to get involved in the probate process. Probate is the legal process by which the distribution of possessions and resolution of claims occurs after someone dies. </p>
                 <div>
                     <widget id="gavel6" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
                     <widget id="pane6-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>

@@ -1,17 +1,15 @@
-<div id="{{_id}}-wrapper">
-    <div id="{{_id}}" class="row-fluid">
-        <div class="inner">
-            <div class="span4">
-                <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer", "link":"index.html"}</widget>    
-            </div>
-            <div class="span8">
-                <a href="login.html" class="loginLink">Login</a>
-                <a href="account.html" style="display:none" class="usernameLink"></a>
-                <a style="display:none" class="logoutLink">Logout</a>
-            </div>
+<div id="{{_id}}">
+    <div class="row-fluid">
+        <div class="span4">
+            <widget id="{{_id}}-logo" class="mainLogo" type="image">{"type":"logo", "id":"cloudlawyer", "link":"index.html"}</widget>    
+        </div>
+        <div class="span8">
+            <a href="login.html" class="loginLink">Login</a>
+            <a href="account.html" style="display:none" class="usernameLink"></a>
+            <a style="display:none" class="logoutLink">Logout</a>
         </div>
     </div>
-    <div id="{{_id}}-notification" class="globalNotification" style="display:none">
+    <div class="globalNotification" style="display:none">
         <p class="notification-text"></p>
     </div>
 </div>

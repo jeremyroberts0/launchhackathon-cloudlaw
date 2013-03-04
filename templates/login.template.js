@@ -24,7 +24,7 @@ $.notification().listen('initialize', 'login', '*', function(notification) {
 		
 		disableFields();
 		
-		$.notification().notify('hide', 'alert', id + '-alert', { });
+		$.notification().notify('hideGlobalNotification', 'header', '*', { });
 		
 		$.notification().notify('getValue', 'field', id + '-username', {callback:function(value){
 			username = value;
@@ -43,10 +43,9 @@ $.notification().listen('initialize', 'login', '*', function(notification) {
 				redirect()
 			}, function(data) {
 				enableFields();
-				
-				if (data.code === 1) {
+				if (data.code === '1') {
 					$.notification().notify('showGlobalNotification', 'header', '*', {type:'error', text:'The password you entered is incorrect'});
-				} else if (data.code === 150) {
+				} else if (data.code === '150') {
 					$.notification().notify('showGlobalNotification', 'header', '*', {type:'error', text:'No account exists with the email address you entered'});
 				} else {
 					$.notification().notify('showGlobalNotification', 'header', '*', {type:'error', text:'Server error!  Please try again.'});
