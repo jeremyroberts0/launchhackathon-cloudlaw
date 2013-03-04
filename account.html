@@ -7,6 +7,9 @@
 		<title>Cloud Lawyer</title>
 	</head>
 	<body>
+	    <div class="fullScreenLoading modal-backdrop fade in">
+	        <p>Loading, please wait...</p>
+	    </div>
 		<template id="header" type="header"></template>
 		
 		<h2>Upcoming Meetings</h2>
@@ -21,6 +24,24 @@
 		<template id="packages" type="packages" model="ownDocumentsByMeeting" runAt="client"></template>
 		
 		<template id="footer" type="footer"></template>
+		<script>
+            var templatePackagesCompleted = $.Deferred();
+            var templateMeetingsCompleted = $.Deferred();
+            
+            $.notification().listen('initialize', 'meetings', 'meetings', function(notification){
+                templatePackagesCompleted.resolve();
+            });
+            
+            $.notification().listen('initialize', 'packages', 'packages', function(notification){
+               templateMeetingsCompleted.resolve(); 
+            });
+            
+            var bothTemplateAndMeetingCompleted = $.when(templateMeetingsCompleted, templatePackagesCompleted);
+            bothTemplateAndMeetingCompleted.done(function(){
+               $('.fullScreenLoading').fadeOut(); 
+            });
+            
+		</script>
 	</body>
 </html>
     

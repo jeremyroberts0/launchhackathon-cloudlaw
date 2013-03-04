@@ -10,13 +10,13 @@ $.notification().listen('initialize', 'meetings', '*', function(notification) {
 		
 		var date = new Date();
 		var currentTime = date.getTime();
-		if (time + 3600000 < currentTime) {
-			$('a', this).removeAttr('href').html('Meeting Over').addClass('meeting-unavailable');
-		} else {
-//			if (time - 900000 < currentTime && time + 3600000 < currentTime) {
-				$('a', this).removeAttr('href').html('Start Meeting');
-//			}
-		}
+//		if (time + 3600000 < currentTime) {
+//			$('a', this).removeAttr('href').html('Meeting Over').addClass('meeting-unavailable');
+//		} else {
+////			if (time - 900000 < currentTime && time + 3600000 < currentTime) {
+//				$('a', this).html('Start Meeting');
+////			}
+//		}
 		
 	});
 	

@@ -6,7 +6,13 @@ widget, template {
     display:none;
     visibility:hidden;
 }
-
+.fullScreenLoading p {
+    text-align: center;
+    vertical-align: center;
+    color: #FFFFFF;
+    margin-top: 200px;
+    font-size: 20px;
+}
 /* $TYPOGRAPHY */
 @font-face {
   font-family: 'Droid Sans';

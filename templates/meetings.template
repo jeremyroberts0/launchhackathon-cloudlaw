@@ -1,3 +1,4 @@
+<div class="horizontalLayout" id="{{_id}}">
 {{#result}}
     <div id="meeting-{{id}}" class="meeting-card">
         <div class="inner horizontalLayout">
@@ -7,7 +8,7 @@
         <div class="meeting-info horizontalLayout">
             <p class="bold">Video Conference</p>
             <p>with {{host}}</p>
-            &nbsp;<a href="meeting.html?id={{time}}">Meeting Scheduled</a>
+            &nbsp;<a href="meeting.html?id={{time}}">Start Meeting</a>
             <br />
         </div>
     </div>
@@ -16,3 +17,4 @@
 {{^result}}
 	<div>You have no meetings scheduled</div>
 {{/result}}
+</div>
