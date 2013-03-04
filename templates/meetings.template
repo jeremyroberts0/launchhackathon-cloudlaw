@@ -1,6 +1,16 @@
-{{#meetings}}
-	<div>Meeting with {{host}} at {{time}}</div>
-{{/meetings}}
-{{^meetings}}
+{{#result}}
+    <div class="meeting-card">
+        <div class="inner horizontalLayout">
+            <p>{{time}}</p>
+            <div class="big-plus"></div>    
+        </div>
+        <div class="meeting-info horizontalLayout">
+            <p class="bold">Video Conference</p>
+            <p>with {{host}}</p>
+        </div>
+    </div>
+	
+{{/result}}
+{{^result}}
 	<div>You have no meetings scheduled</div>
-{{/meetings}}
+{{/result}}

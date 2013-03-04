@@ -287,6 +287,9 @@ body {
     background-color:#3E3E3E;
     overflow:hidden;
 }
+.calendar.week thead span.date {
+    color:#ffffff;
+}
 .calendar.week tbody tr td {
     padding-bottom: 20px;
     font-size: 12px;
@@ -314,13 +317,14 @@ body {
     color:#595959;
 }
 .calendar .event {
-    
-    margin-top: 1px;
-    height: 25px;
+    font-size: 11px;
+    margin-top: -1px;
+    margin-left: -6px;
+    height: 30px;
     text-align:center;
     border-radius: 5px;
     position:absolute;
-    width: 135px;
+    width: 112px;
     padding-top: 8px;
 }
 .calendar .event.selected {
@@ -331,3 +335,45 @@ body {
     cursor:default;
 }
 
+/* $ACCOUNT */
+.meeting-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFFFFF;
+    border: #E0E0E0 solid 1px;
+    display:inline-block;
+    width: 146px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.meeting-card .inner {
+    border-left:#0088CC 3px solid;
+}
+.meeting-card .inner p {
+    width: 60px;
+    padding-left: 10px;
+}
+.meeting-card .inner .big-plus {
+    width: 38px;
+    height: 38px;
+    background-color: #E0E0E0;
+    float:right;
+    background-image: url('http://81ddd102e3ce0fbdf5e1-7158f6b24e5d11fdd8350c66521fe0d0.r24.cf1.rackcdn.com/imgs/cl-misc-editicon.png');
+    background-repeat:no-repeat;
+    background-position-x:center;
+    background-position-y:center;
+}
+.meeting-card .meeting-info {
+    margin-top: 20px;
+    background-color:#4D4645;
+}
+.meeting-cart .meeting-info p.bold {
+    font-weight: bold;
+}
+.meeting-card .meeting-info p {
+    display:block;
+    color: #FFFFFF;
+    font-size: 11px;
+    padding: 5px;
+    margin-bottom: 0px;
+}

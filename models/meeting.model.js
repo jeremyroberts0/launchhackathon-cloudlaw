@@ -43,9 +43,12 @@ $.notification().listen('get', 'model', 'ownMeetings', function(notification) {
 			// TODO user not logged in -- handle this better
 		} else {
 			$.server({"userId":$.appConfig.defaultUsername}).read("table", { id:"meeting", filter:{customer:credentials.userId}}, function(data) {
-				if (data.result.length === 0) {
+				if (data.result.length !== 0) {
+					$.each(data.result, function(index, meeting){
+						data.result[index].time = $.utilities.parseEpoch(meeting.time);
+					});
 					if (payload.callback !== undefined) {
-						payload.callbac(data.result);
+						payload.callback(data);
 					}
 				} else {
 					if (payload.failure !== undefined) {
