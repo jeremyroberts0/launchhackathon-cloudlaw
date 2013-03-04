@@ -3,13 +3,12 @@
       	<div class="row">
       		<div id="publisher"></div>
 	      		<div class="row">
-	      			<widget id="showMyVideoCheckbox" type="field">{"type":"boolean", "label":"Boolean Field", "labelType":"Show my video feed?"}</widget>
+	      			<widget id="showMyVideoCheckbox" type="field">{"type":"boolean", "label":"Show My Video?"}</widget>
 	      		</div>
       		</div>
       </div>
       <div class="span6">
       	<div id="subscriber">
-      		<p>Your lawyer has not yet joined the meeting</p>
       	</div>
       </div>
 </div>
