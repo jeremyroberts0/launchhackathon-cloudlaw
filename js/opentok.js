@@ -35,6 +35,8 @@ function streamCreatedHandler(event) {
 }
 */
 
+var videoId = $.url.parameter("id");
+
 var apiKey = "23135122";
 var sessionId = "2_MX4yMzEzNTEyMn4xMjcuMC4wLjF-U3VuIE1hciAwMyAwOToxMDo0NyBQU1QgMjAxM34wLjk5MTg4OTgzfg";
 var token = "T1==cGFydG5lcl9pZD0yMzEzNTEyMiZzZGtfdmVyc2lvbj10YnJ1YnktdGJyYi12MC45MS4yMDExLTAyLTE3JnNpZz0wMjkxYzBjY2YxOTE1MWRjNzViM2NmMzFjZjA2ZDY0NTQ4OWJiYjQxOnJvbGU9bW9kZXJhdG9yJnNlc3Npb25faWQ9Ml9NWDR5TXpFek5URXlNbjR4TWpjdU1DNHdMakYtVTNWdUlFMWhjaUF3TXlBd09Ub3hNRG8wTnlCUVUxUWdNakF4TTM0d0xqazVNVGc0T1RnemZnJmNyZWF0ZV90aW1lPTEzNjIzMzA5MjQmbm9uY2U9MC4xMzE1OTc2Mzc4NDcxMjE2NCZleHBpcmVfdGltZT0xMzY0OTIyOTI0JmNvbm5lY3Rpb25fZGF0YT0=";

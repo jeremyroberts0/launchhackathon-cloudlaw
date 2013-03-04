@@ -15,7 +15,7 @@ var messagesRef = new Firebase(firebaseURL);
 messagesRef.limit(10).on('child_added', function (snapshot) {
   var message = snapshot.val();
   $('<div/>').text(message.text).prepend($('<em/>')
-    .text(message.name+'>> ')).appendTo($('#template-chat-message-history'));
+    .text(message.name+' ').wrap("<span>")).appendTo($('#template-chat-message-history'));
   $('#template-chat-message-history')[0].scrollTop = $('#template-chat-message-history')[0].scrollHeight;
 });
 

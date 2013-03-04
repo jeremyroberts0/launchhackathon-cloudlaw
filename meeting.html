@@ -7,13 +7,14 @@
 		<script src="js/opentok.js"></script>
 		<script src='https://cdn.firebase.com/v0/firebase.js'></script></head>
 		<script src="js/chat.js"></script>
+		<script src="models/meeting.model.js"></script>
 	</head>
 	<body>
 		<template id="header" type="header"></template>
 		<div class="row">
-			  <div class="span3">
-			  	<div class="row">
-			  			<template id="attendees" type="attendees"></template>
+			  <div class="span3 left-side-meeting">
+			  	<div class="row left-side-meeting-top">
+			  			<template id="attendees" type="attendees" model="meeting"></template>
 			  		</div>
 			  		<div class="row">
 			  			<template id="chat" type="chat"></template>
