@@ -4,6 +4,13 @@ $.notification().listen('initialize', 'chat', '*', function(notification){
 	    	$.notification().notify("click", "button", "chat-submit", { });
 	    }
 	});
+	
+	$('#showMyVideoCheckbox-checkbox').click(function(){
+		var checked = $('#showMyVideoCheckbox-checkbox:checked').length > 0;
+		
+		
+		
+	});
 });
 //$(document).ready(function() {
 //	

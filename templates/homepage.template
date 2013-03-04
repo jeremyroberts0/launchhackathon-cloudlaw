@@ -79,7 +79,7 @@
     </div>
     <div class="bluebar" class="horizontalLayout">
         <div class="inner">
-            <img src="">
+           <widget id="{{_id}}-headerImage3" type="image">{"type":"misc", "id":"giftbox", "fileFormat":"png"}</widget>
             <div>
                 <h2>What we offer...</h2>
                 <p>Choose a package below and schedule a video conference with an attorney who specializes in that field.</p>
@@ -90,13 +90,15 @@
     <div class="row-fluid">
         <div class="span6">
             <img src="" class="pull-left">
-            <h2>Live 1 on 1 support with great lawyers from the comfort of your home</h2>
+            <h2><widget id="{{_id}}-headerImage1" type="image">{"type":"misc", "id":"camera", "fileFormat":"png"}</widget>Live 1 on 1 support with great lawyers from the comfort of your home</h2>
             <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+            <widget id="{{_id}}-button8" type="button">{"title":"Schedule A Meeting", "color":"orange", "link":"book.html", "cssClass":"pull-right"}</widget>
         </div>
         <div class="span6">
             <img src="" class="pull-right">
-            <h2>Easily manage &amp; print your legal documents, all from your account.</h2>
+            <h2><widget id="{{_id}}-headerImage2" type="image">{"type":"misc", "id":"bigDoc", "fileFormat":"png"}</widget>Easily manage &amp; print your legal documents, all from your account.</h2>
             <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
+            <widget id="{{_id}}-button9" type="button">{"title":"Create An Account", "color":"orange", "link":"login.html", "cssClass":"pull-right"}</widget>
         </div>
     </div>
 </div>
