@@ -2,7 +2,8 @@
     <div class="inner row-fluid">
     	<div class="sub-footer span2">
     		<h4>Home</h4>
-    		<a href="index.html">Home</a>
+    		<a href="index.html">Home</a><br />
+    		<a href="aboutUs.html">About Us</a><br />
     	</div>
     	<div class="sub-footer span2">
     		<h4>Goes Way</h4>

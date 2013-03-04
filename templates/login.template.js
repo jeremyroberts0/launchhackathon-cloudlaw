@@ -23,7 +23,7 @@ $.notification().listen('initialize', 'login', '*', function(notification) {
 			$.notification().notify('update', 'alert', 'loginpage'+'-alert', {text:'Please enter a username', hidden:false});
 		} else {
 			$.server().login($.appConfig.defaultCustomer, username, password, function(data) {
-				$(id).modal('hide'); // TODO redirect to URL param here
+				//$(id).modal('hide'); // TODO redirect to URL param here
 				var referrer = $.url.getParameter("ref");
 				if (referrer === undefined || referrer === null || referrer === "") {
 					referrer = "index.html";
