@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cloud Lawyer Admin</title>
+    <title>CloudLawyer Admin</title>
     <script src="http://api.webutilitykit.com/webutilitykit-v1.js"></script>
 </head>
 <body id="body">
     <template id="header" type="../../templates/header"></template>
+    <a href="meetings.html"><< Meetings</a>
     <h1>Meeting Blah</h1>
-    <widget id="meh" type="form">{"schema":"meeting", "table":"meeting", "row":"2", "title":"Editing Meeting", "showId":true, "order":["id", "name", "description", "image"], "saveButtonText":"Save Meeting", "labelType":"placeholder", "errorPlacement":"right"}</widget>
+    <widget id="meeting-form" type="form">{"schema":"meeting", "table":"meeting", "row":"1", "title":"Editing Meeting", "showId":true, "order":["id", "order", "time", "host", "customer", "conferenceToken", "chatToken", "status"], "saveButtonText":"Save Meeting", "labelType":"horizontal", "errorPlacement":"right"}</widget>
     <template id="footer" type="../../templates/footer"></template>
     <script>
-    	$.notification().listen("loaded", "form", "meh", function(notification) {
+    	$.notification().listen("loaded", "form", "meeting-form", function(notification) {
     		var meetingId = $.url.parameter("id");
-    		$.notification().notify("update", "form", "meh", { row:meetingId });
+    		$.notification().notify("update", "form", "meeting-form", { row:meetingId });
     	});
     </script>
 </body>
