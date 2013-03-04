@@ -13,8 +13,7 @@
                 <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
                 <div>
                     <widget id="gavel1" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
-                    <widget id="pane1-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"login.html#needAccount?ref=http%3A%2F%2Flocalhost%2Fhackathon%2Fbook.html"}</widget>
-                    $.utilities.redirect('login.html?ref=http%3A%2F%2Flocalhost%2Fhackathon%2Fbook.html' + encodeURIComponent(document.location.href) + '#needAccount');
+                    <widget id="pane1-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
                 </div>    
             </div>
             <div class="span7">
@@ -27,7 +26,7 @@
                 <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
                 <div>
                     <widget id="gavel2" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
-                    <widget id="pane2-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"login.html#needAccount?ref=http%3A%2F%2Flocalhost%2Fhackathon%2Fbook.html"}</widget>
+                    <widget id="pane2-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
                 </div>    
             </div>
             <div class="span7">
@@ -40,7 +39,7 @@
                 <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
                 <div>
                     <widget id="gavel3" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
-                    <widget id="pane3-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"login.html#needAccount?ref=http%3A%2F%2Flocalhost%2Fhackathon%2Fbook.html"}</widget>
+                    <widget id="pane3-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
                 </div>    
             </div>
             <div class="span7">
@@ -53,7 +52,7 @@
                 <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
                 <div>
                     <widget id="gavel4" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
-                    <widget id="pane4-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"login.html#needAccount?ref=http%3A%2F%2Flocalhost%2Fhackathon%2Fbook.html"}</widget>
+                    <widget id="pane4-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
                 </div>    
             </div>
             <div class="span7">
@@ -66,7 +65,7 @@
                 <p>Cloud Lawyer is the easy affordable way to connect you with a lawyer who specializes in wills, trusts, intellectual property, startup packages, and probate.  You can easily download and print your legal documents directly from your account.</p>
                 <div>
                     <widget id="gavel6" type="image">{"type":"misc", "id":"gavelofdoom", "fileFormat":"png"}</widget>
-                    <widget id="pane6-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"login.html#needAccount?ref=http%3A%2F%2Flocalhost%2Fhackathon%2Fbook.html"}</widget>
+                    <widget id="pane6-button" type="button">{"title":"Make an Appointment", "color":"orange", "cssClass":"pull-right", "link":"book.html"}</widget>
                 </div>    
             </div>
             <div class="span7">

@@ -13,12 +13,12 @@
                     <a href="{{url}}" target="_blank" class="pull-right" download="{{name}}"><i class="icon-download-alt icon-white"></i> Download this Document</a>
                 {{/documents}}
                 {{^documents}}
-                <div>You have no documents for this meeting</div>
+                <p>You have no documents for this meeting</p>
                 {{/documents}}
             </div>
         </div>
     {{/packages}}
     {{^packages}}
-    	<div>Your lawyer has not added any documents for you</div>
+    	<p>Your lawyer has not added any documents for you</p>
     {{/packages}}
 </div>

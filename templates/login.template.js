@@ -2,59 +2,72 @@
 $.notification().listen('initialize', 'login', '*', function(notification) {
 	var id = notification.getId();
 	
-	$.notification().listen('click', 'button', 'loginpage-loginButton', function(loginButtonNotification) {
+	function redirect() {
+		var referrer = $.url.parameter("ref");
+		if (referrer === undefined || referrer === null || referrer === "") {
+			referrer = "account.html";
+		} else {
+			referrer = decodeURIComponent(referrer);
+		}
+		$.utilities.redirect(referrer);
+	}
+	
+	getPrimaryUser(function(credentials) {
+		if (credentials !== undefined) {
+			redirect();
+		}
+	});
+	
+	$.notification().listen('click', 'button', id + '-loginButton', function(loginButtonNotification) {
 		var username;
 		var password;
 		
 		disableFields();
 		
-		$.notification().notify('hide', 'alert', 'loginpage'+'-alert', { });
+		$.notification().notify('hide', 'alert', id + '-alert', { });
 		
-		$.notification().notify('getValue', 'field', 'loginpage'+'-username', {callback:function(value){
+		$.notification().notify('getValue', 'field', id + '-username', {callback:function(value){
 			username = value;
 		}});
-		$.notification().notify('getValue', 'field', 'loginpage'+'-password', {callback:function(value){
+		$.notification().notify('getValue', 'field', id + '-password', {callback:function(value){
 			password = MD5(value);
 		}});
 		
 		if (username === undefined) {
-			$.notification().notify('update', 'alert', 'loginpage'+'-alert', {text:'Please enter a username', hidden:false});
+			$.notification().notify('update', 'alert', id + '-alert', {text:'Please enter a username', hidden:false});
 		} else if (password === undefined) {
-			$.notification().notify('update', 'alert', 'loginpage'+'-alert', {text:'Please enter a username', hidden:false});
+			$.notification().notify('update', 'alert', id + '-alert', {text:'Please enter a username', hidden:false});
 		} else {
 			$.server().login($.appConfig.defaultCustomer, username, password, function(data) {
 				//$(id).modal('hide'); // TODO redirect to URL param here
-				var referrer = $.url.getParameter("ref");
-				if (referrer === undefined || referrer === null || referrer === "") {
-					referrer = "index.html";
-				}
-				$.utilities.redirect(referrer);
-				$.notification().notify('updateTemplate', 'header', '*', {loggedIn:true, username:username});
+				redirect()
 			}, function(data) {
 				enableFields();
 				
 				if (data.code === 1) {
-					$.notification().notify('update', 'alert', 'loginpage'+'-alert', {text:'The password you entered is incorrect', hidden:false});
+					$.notification().notify('showGlobalNotification', 'header', '*', {type:'error', text:'The password you entered is incorrect'});
 				} else if (data.code === 150) {
-					$.notification().notify('update', 'alert', 'loginpage'+'-alert', {text:'No account exists with the email address you entered', hidden:false});
+					$.notification().notify('showGlobalNotification', 'header', '*', {type:'error', text:'No account exists with the email address you entered'});
 				} else {
-					$.notification().notify('update', 'alert', 'loginpage'+'-alert', {text:'Server error!  Please try again.', hidden:false});
+					$.notification().notify('showGlobalNotification', 'header', '*', {type:'error', text:'Server error!  Please try again.'});
 				}
 				
 			});
 		}
 		
 		function enableFields() {
-			$.notification().notify('enable', 'field', 'loginpage'+'-username', { });
-			$.notification().notify('enable', 'field', 'loginpage'+'-password', { });
-			$.notification().notify('enable', 'button', 'loginpage'+'-loginButton', { });
+			$.notification().notify('enable', 'field', id + '-username', { });
+			$.notification().notify('enable', 'field', id + '-password', { });
+			$.notification().notify('enable', 'button', id + '-loginButton', { });
 		}
 		
 		function disableFields() {
-			$.notification().notify('disable', 'field', 'loginpage'+'-username', { });
-			$.notification().notify('disable', 'field', 'loginpage'+'-password', { });
-			$.notification().notify('disable', 'button', 'loginpage'+'-loginButton', { });
+			$.notification().notify('disable', 'field', id + '-username', { });
+			$.notification().notify('disable', 'field', id + '-password', { });
+			$.notification().notify('disable', 'button', id + '-loginButton', { });
 		}
+		
+		
 	
 	
 	});

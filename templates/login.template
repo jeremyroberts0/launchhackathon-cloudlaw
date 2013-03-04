@@ -1,6 +1,6 @@
-<div>
-	<widget id="loginpage-alert" type="alert">{"text":"This is an alert", "closeable":false, "hidden":true, "color":"red"}</widget>
-	<widget id="loginpage-username" type="field">{"label":"Username", "labelType":"horizontal", "required":"true", "type":"email"}</widget>
-	<widget id="loginpage-password" type="field">{"label":"Password", "labelType":"horizontal", "required":"true", "type":"password"}</widget>
-	<widget id="loginpage-loginButton" type="button">{"title":"Login", "color":"blue"}</widget>
+<div id="{{_id}}">
+	<widget id="{{_id}}-alert" type="alert">{"text":"This is an alert", "closeable":false, "hidden":true, "color":"red"}</widget>
+	<widget id="{{_id}}-username" type="field">{"label":"Username", "labelType":"placeholder", "required":"true", "type":"email"}</widget>
+	<widget id="{{_id}}-password" type="field">{"label":"Password", "labelType":"placeholder", "required":"true", "type":"password"}</widget>
+	<widget id="{{_id}}-loginButton" type="button">{"title":"Login", "color":"blue"}</widget>
 </div>
