@@ -55,7 +55,6 @@ $.notification().listen('get', 'model', 'ownMeetings', function(notification) {
 						payload.failure({message:'server error'});
 					}
 				}
-				//payload.callback(data.result);
 			}, function(){
 				if (payload.failure !== undefined) {
 					payload.failure({message:'server error'});
