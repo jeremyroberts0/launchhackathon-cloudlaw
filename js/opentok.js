@@ -78,7 +78,7 @@ function streamCreatedHandler(event) {
 }
 
 
-$.notification.listen("change", "field", "showMyVideoCheckbox", function(data) {
+$.notification().listen("change", "field", "showMyVideoCheckbox", function(data) {
 	alert("hi");
 	$("#publisher").toggle();
 });
