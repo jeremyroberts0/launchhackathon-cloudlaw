@@ -1,0 +1,8 @@
+<h2>Cloud Lawyer Meeting Confirmation</h2>
+<p>Your meeting with {{hostName}} has been confirmed for {{niceTime}} to discuss {{service}}<br>
+    When it is time for your meeting you can reach the meeting room by clicking the link below or logging in to your account at <a href="http://www.cloudlawyer.co">http://www.cloudlawyer.co</a>
+</p>
+<p>Your meeting link: <a href="http://www.cloudlawyer.co/meeting.html?id={{time}}">http://www.cloudlawyer.co/meeting.html?id={{time}}</a><br>
+    You may contact your lawyer at {{host}}</p>
+<br>
+<p>Thank you for choosing Cloud Lawyer</p>

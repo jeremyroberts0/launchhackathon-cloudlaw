@@ -95,6 +95,7 @@ body {
     vertical-align: middle;
 }
 #header > div > div:last-child {
+    padding-top: 5px;
     text-align: right;
 }
 #header > div > div:last-child > a {

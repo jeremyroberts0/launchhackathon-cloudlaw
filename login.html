@@ -19,6 +19,14 @@
         </div>
     </div>
     <template id="footer" type="footer"></template>
+    <script>
+    $.notification().listen('initialize', 'footer', 'footer', function(notification){
+        if ($.url.parameter('ref') !== undefined) {
+            $.notification().notify('showGlobalNotification', 'header', 'header', {type:'error', text:'Create an Account or Login to continue'});
+        }
+    });
+        
+    </script>
     
 </body>
 </html>

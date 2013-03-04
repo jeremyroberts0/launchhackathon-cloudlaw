@@ -71,14 +71,26 @@ $.notification().listen('placeOrder', 'controller', 'book', function(notificatio
 						city:data.city,
 						state:data.state,
 						zipcode:data.zipcode,
-				}
+						host:meeting.host,
+						hostEmail:meeting.hostEmail
+				};
 					
 				
-					$.notification().notify('create', 'model', 'meeting', {meeting:meeting, callback:function(meetingId) {
-						$.server({userId:$.appConfig.defaultUsername}).override('table', {id:meetingId, row:meetingId, data:order}, function(){
-							$.utilities.redirect('account.html?newMeeting='+meetingId);
-						});
-					}});
+				$.notification().notify('create', 'model', 'meeting', {meeting:meeting, callback:function(meetingId) {
+					$.server({userId:$.appConfig.defaultUsername}).override('table', {id:'order', row:meetingId, data:order}, function() {
+//						$.notification().notify('get', 'template', 'checkout-confirmation-email', {data:order, callback:function(emailHtml) {
+//							order.niceTime = $.utilities.parseEpoch(order.time);
+//							emailHtml = Mustache.render(emailHtml, order);
+//							$.server().update('email', {to:order.customer, subject:'Your Cloud Lawyer Meeting Confirmation', body:emailHtml}, function(){
+								$.utilities.redirect('account.html?newMeeting='+meetingId);
+//							});
+//						}});
+					});
+				}});
+				
+				function orderError() {
+					$.notification().notify('showGlobalNotification', 'header', 'header', {type:'error', text:'There was an error placing your order, please try again'});
+				}
 					
 					
 				
