@@ -1,3 +1,4 @@
+<div class="horizontalLayout" id="{{_id}}">
 {{#result}}
     <div id="meeting-{{id}}" class="meeting-card">
         <div class="inner horizontalLayout">
@@ -16,3 +17,4 @@
 {{^result}}
 	<div>You have no meetings scheduled</div>
 {{/result}}
+</div>
