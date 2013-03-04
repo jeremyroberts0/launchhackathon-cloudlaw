@@ -52,6 +52,8 @@ session.connect(apiKey, token);
 function sessionConnectedHandler (event) {
 	// initializing publisher above
 	//session.publish();
+	subscribeToStreams(event.streams);
+	session.publish(publisher);
 }
 
 function subscribeToStreams(streams) {
